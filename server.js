@@ -634,9 +634,9 @@ class io_minion extends IO {
         if (this.body.aiSettings.reverseDirection && ran.chance(0.005)) { this.turnwise = -1 * this.turnwise; }
         if (input.target != null && (input.alt || input.main)) {
             let sizeFactor = Math.sqrt(this.body.master.size / this.body.master.SIZE);
-            let leash = 60 * sizeFactor;
-            let orbit = 120 * sizeFactor;
-            let repel = 135 * sizeFactor;
+            let leash = (60 * this.body.master.FOV) * sizeFactor;
+            let orbit = (120 * this.body.master.FOV) * sizeFactor;
+            let repel = (135 * this.body.master.FOV) * sizeFactor;
             let goal;
             let power = 1;
             let target = new Vector(input.target.x, input.target.y);
@@ -3037,7 +3037,7 @@ const sockets = (() => {
                 case 'L': { // level up cheat
                     if (m.length !== 0) { socket.kick('Ill-sized level-up request.'); return 1; }
                     // cheatingbois
-                    if (player.body != null) { if (player.body.skill.level < c.SKILL_CHEAT_CAP && ((socket.key === process.env.SECRET) && player.body.skill.level < 45)) {
+                    if (player.body != null) { if (player.body.skill.level < c.SKILL_CHEAT_CAP || ((socket.key === process.env.SECRET) && player.body.skill.level < 45)) {
                         player.body.skill.score += player.body.skill.levelScore;
                         player.body.skill.maintain();
                         player.body.refreshBodyAttributes();
