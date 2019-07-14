@@ -3044,14 +3044,24 @@ const sockets = (() => {
                     } }
                 } break;
                     case 'K': { // Ability firing system
-                     if (player.body.label === 'Basic' && (player.body.lastArtilleryFire || 0) < Date.now()) {
+                     if (player.body.label === 'Crafter'  && (player.body.lastArtilleryFire || 0) < Date.now()) {
                              player.body.lastArtilleryFire = Date.now() + 5000
                              let targ = {x: player.body.x + player.target.x, y: player.body.y + player.target.y}
                              let o = new Entity(targ); 
                              o.define(Class.basedefenderbetter); // defines the new entity as the class defined
-                             o.range = 100;
+                             o.range = 15;
                              o.team = -1;
-                             o.SIZE = 15;
+                             o.SIZE = 25;
+                             o.color = 10;   
+                          }
+                     if (player.body.label === 'Creator' && (player.body.lastArtilleryFire || 0) < Date.now()) {
+                             player.body.lastArtilleryFire = Date.now() + 5000
+                             let targ = {x: player.body.x + player.target.x, y: player.body.y + player.target.y}
+                             let o = new Entity(targ); 
+                             o.define(Class.basedefender); // defines the new entity as the class defined
+                             o.range = 15;
+                             o.team = -1;
+                             o.SIZE = 25;
                              o.color = 10;   
                           }
                      } break;
