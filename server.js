@@ -3049,7 +3049,7 @@ const sockets = (() => {
                              let targ = {x: player.body.x + player.target.x, y: player.body.y + player.target.y}
                              let o = new Entity(targ); 
                              o.define(Class.basedefenderbetter); // defines the new entity as the class defined
-                             o.range = 15;
+                             o.range = 5;
                              o.team = -1;
                              o.SIZE = 25;
                              o.color = 10;   
@@ -3059,7 +3059,7 @@ const sockets = (() => {
                              let targ = {x: player.body.x + player.target.x, y: player.body.y + player.target.y}
                              let o = new Entity(targ); 
                              o.define(Class.basedefender); // defines the new entity as the class defined
-                             o.range = 15;
+                             o.range = 5;
                              o.team = -1;
                              o.SIZE = 25;
                              o.color = 10;   
