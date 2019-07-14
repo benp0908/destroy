@@ -635,7 +635,7 @@ class io_minion extends IO {
         if (input.target != null && (input.alt || input.main)) {
             let sizeFactor = Math.sqrt(this.body.master.size / this.body.master.SIZE);
             let leash = (60 * this.body.master.FOV) * sizeFactor;
-            let orbit = (120 * this.body.master.FOV) * sizeFactor;
+            let orbit = 120 * sizeFactor;
             let repel = 135 * sizeFactor;
             let goal;
             let power = 1;
