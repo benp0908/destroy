@@ -131,7 +131,7 @@ const room = {
             let a = Math.floor(location.y * room.ygrid / room.height);
             let b = Math.floor(location.x * room.xgrid / room.width);
             let v = room.setup[a][b];
-            return v !== 'nest';
+            return v == 'norm';
         } else {
             return false;
         }
@@ -3288,7 +3288,7 @@ const sockets = (() => {
                     switch (room.gameMode) {
                         case "tdm": {
                             // Count how many others there are
-                            let census = [1, 1, 1, 1], scoreCensus = [1, 1, 1, 1];
+                            let census = [1], scoreCensus = [1];
                             players.forEach(p => { 
                                 census[p.team - 1]++; 
                                 if (p.body != null) { scoreCensus[p.team - 1] += p.body.skill.score; }
@@ -4529,7 +4529,7 @@ var maintainloop = (() => {
     // Spawning functions
     let spawnBosses = (() => {
         let timer = 0;
-        let wave = 1;
+        let wave = 0;
         let boss = (() => {
             let i = 0,
                 names = [],
@@ -4561,9 +4561,9 @@ var maintainloop = (() => {
                     } else {
                         begin = 'Visitors are coming.';
                         arrival = '';
-                        for (let i=0; i<n-2; i++) arrival += names[i] + ', ';
-                        arrival += names[n-2] + ' and ' + names[n-1] + ' have arrived.';
+                        arrival += 'Wave ' + wave + ' has arrived.';
                     }
+                  wave += 1
                 },
                 spawn: () => {
                     sockets.broadcast(begin);
@@ -4583,10 +4583,16 @@ var maintainloop = (() => {
                 let choice = [];
                 switch (wave) {
                     case 0: 
-                        choice = [[Class.crasher], 10, 'a', 'nest'];
+                        choice = [[Class.crasher, Class.crammer], 3, 'a', 'nest'];
                         break;
                     case 1: 
-                        choice = [[Class.palisade], 1, 'castle', 'norm']; 
+                        choice = [[Class.crasher, Class.crammer], 5, 'a', 'nest'];
+                        break;
+                    case 2: 
+                        choice = [[Class.crasher, Class.crammer], 8, 'a', 'nest'];
+                        break;
+                    case 10: 
+                        choice = [[Class.palisade], 1, 'castle', 'nest']; 
                         sockets.broadcast('A strange trembling...');
                         break;
                 }
@@ -4633,7 +4639,7 @@ var maintainloop = (() => {
                 }
             }).filter(e => { return e; });    
             // Spawning
-            spawnCrasher(census);
+            //spawnCrasher(census);
             spawnBosses(census);
             /*/ Bots
                 if (bots.length < c.BOTS) {
