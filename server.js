@@ -3043,18 +3043,18 @@ const sockets = (() => {
                         player.body.refreshBodyAttributes();
                     } }
                 } break;
-                    case 'K': { // Artillery tank firing system
-if (player.body.label === 'Basic' && (player.body.lastArtilleryFire || 0) < Date.now()) {
-        player.body.lastArtilleryFire = Date.now() + 1500
-        let targ = {x: player.body.x + player.target.x, y: player.body.y + player.target.y}
-        let o = new Entity(targ); 
-        o.define(Class.basedefenderbetter); // defines the new entity as the class defined
-        o.range = 5;
-        o.team = -1;
-        o.SIZE = 15;
-        o.color = 10;   
-     }
-} break;
+                    case 'K': { // Ability firing system
+                     if (player.body.label === 'Basic' && (player.body.lastArtilleryFire || 0) < Date.now()) {
+                             player.body.lastArtilleryFire = Date.now() + 5000
+                             let targ = {x: player.body.x + player.target.x, y: player.body.y + player.target.y}
+                             let o = new Entity(targ); 
+                             o.define(Class.basedefenderbetter); // defines the new entity as the class defined
+                             o.range = 100;
+                             o.team = -1;
+                             o.SIZE = 15;
+                             o.color = 10;   
+                          }
+                     } break;
                 case '0': { // testbed cheat
                     if (m.length !== 0) { socket.kick('Ill-sized testbed request.'); return 1; }
                     // cheatingbois
