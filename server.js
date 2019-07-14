@@ -4577,7 +4577,7 @@ var maintainloop = (() => {
             };
         })();
         return census => {
-            if (timer > 60 && ran.dice(80 - timer)) {
+            if (timer > 120 && ran.dice(200 - timer)) {
                 util.log('[SPAWN] Preparing to spawn...');
                 timer = 0;
                 let choice = [];
@@ -4601,10 +4601,6 @@ var maintainloop = (() => {
                         choice = [[Class.crasher, Class.crammer, Class.hostileminion, Class.turretry], 10, 'a', 'nest'];
                         break;
                     case 6: 
-                        choice = [[Class.crasher, Class.crammer], 50, 'a', 'nest'];
-                        sockets.broadcast('A large wave of Shapes are approaching!');
-                        break;
-                    case 6: 
                         choice = [[Class.crasher, Class.crammer, Class.hostileminion, Class.turretry], 15, 'a', 'nest'];
                         break;
                     case 7: 
@@ -4613,9 +4609,13 @@ var maintainloop = (() => {
                     case 8: 
                         choice = [[Class.crasher, Class.crammer, Class.hostileminion, Class.turretry], 21, 'a', 'nest'];
                         break;
-                    case 9: 
+                    /*case 9: 
                         choice = [[Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap], 17, 'a', 'nest'];
                         sockets.broadcast('It seems there is drumfire from the depths of hell...');
+                        break;*/
+                    case 9: 
+                        choice = [[Class.crasher, Class.crammer], 25, 'a', 'nest'];
+                        sockets.broadcast('A large wave of Shapes are approaching!');
                         break;
                     case 10: 
                         choice = [[Class.palisade], 1, 'castle', 'nest']; 
@@ -4623,7 +4623,7 @@ var maintainloop = (() => {
                         break;
                 }
                 boss.prepareToSpawn(...choice);
-                setTimeout(boss.spawn, 60);
+                setTimeout(boss.spawn, 120);
                 // Set the timeout for the spawn functions
             } else if (!census.miniboss) timer++;
         };
