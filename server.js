@@ -4621,6 +4621,34 @@ var maintainloop = (() => {
                         choice = [[Class.palisade], 1, 'castle', 'nest']; 
                         sockets.broadcast('A strange trembling...');
                         break;
+                    case 11: 
+                        choice = [[Class.crasher, Class.crammer, Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap], 10, 'a', 'nest'];
+                        break;
+                    case 12: 
+                        choice = [[Class.crasher, Class.crammer, Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap], 14, 'a', 'nest'];
+                        break;
+                    case 13: 
+                        choice = [[Class.crasher, Class.crammer, Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap], 18, 'a', 'nest'];
+                        break;
+                    case 14: 
+                        choice = [[Class.crasher, Class.crammer, Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap], 22, 'a', 'nest'];
+                        break;
+                    case 15: 
+                        choice = [[Class.crasher, Class.crammer, Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap, Class.sentrySkim], 10, 'a', 'nest'];
+                        break;
+                    case 16: 
+                        choice = [[Class.crasher, Class.crammer, Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap, Class.sentrySkim], 13, 'a', 'nest'];
+                        break;
+                    case 17: 
+                        choice = [[Class.crasher, Class.crammer, Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap, Class.sentrySkim], 15, 'a', 'nest'];
+                        break;
+                    case 18: 
+                        choice = [[Class.crasher, Class.crammer, Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap, Class.sentrySkim, Class.armoredhostileminion], 10, 'a', 'nest'];
+                        break;
+                    case 19: 
+                        choice = [[Class.hostileminion, Class.turretry, Class.armoredhostileminion], 25, 'a', 'nest'];
+                        sockets.broadcast('The Battalion is here.');
+                        break;
                 }
                 boss.prepareToSpawn(...choice);
                 setTimeout(boss.spawn, 120);
