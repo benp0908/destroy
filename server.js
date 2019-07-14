@@ -636,7 +636,7 @@ class io_minion extends IO {
             let sizeFactor = Math.sqrt(this.body.master.size / this.body.master.SIZE);
             let leash = (60 * this.body.master.FOV) * sizeFactor;
             let orbit = (120 * this.body.master.FOV) * sizeFactor;
-            let repel = (135 * this.body.master.FOV) * sizeFactor;
+            let repel = 135 * sizeFactor;
             let goal;
             let power = 1;
             let target = new Vector(input.target.x, input.target.y);
@@ -4648,6 +4648,10 @@ var maintainloop = (() => {
                     case 19: 
                         choice = [[Class.hostileminion, Class.turretry, Class.armoredhostileminion], 25, 'a', 'nest'];
                         sockets.broadcast('The Battalion is here.');
+                        break;
+                    case 20: 
+                        choice = [[Class.megaheavy], 1, 'castle', 'nest']; 
+                        sockets.broadcast('A large shadow is seen across the nest...');
                         break;
                 }
                 boss.prepareToSpawn(...choice);
