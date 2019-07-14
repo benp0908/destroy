@@ -4529,6 +4529,7 @@ var maintainloop = (() => {
     // Spawning functions
     let spawnBosses = (() => {
         let timer = 0;
+        let wave = 1;
         let boss = (() => {
             let i = 0,
                 names = [],
@@ -4567,22 +4568,22 @@ var maintainloop = (() => {
                 spawn: () => {
                     sockets.broadcast(begin);
                     for (let i=0; i<n; i++) {
-                        setTimeout(spawn, ran.randomRange(3500, 5000));
+                        setTimeout(spawn, ran.randomRange(35, 50));
                     }
                     // Wrap things up.
-                    setTimeout(() => sockets.broadcast(arrival), 5000);
+                    setTimeout(() => sockets.broadcast(arrival), 50);
                     util.log('[SPAWN] ' + arrival);
                 },
             };
         })();
         return census => {
-            if (timer > 6000 && ran.dice(16000 - timer)) {
+            if (timer > 60 && ran.dice(80 - timer)) {
                 util.log('[SPAWN] Preparing to spawn...');
                 timer = 0;
                 let choice = [];
-                switch (ran.chooseChance(40, 1)) {
+                switch (wave) {
                     case 0: 
-                        choice = [[Class.elite_destroyer], 2, 'a', 'nest'];
+                        choice = [[Class.crasher], 10, 'a', 'nest'];
                         break;
                     case 1: 
                         choice = [[Class.palisade], 1, 'castle', 'norm']; 
@@ -4590,7 +4591,7 @@ var maintainloop = (() => {
                         break;
                 }
                 boss.prepareToSpawn(...choice);
-                setTimeout(boss.spawn, 3000);
+                setTimeout(boss.spawn, 60);
                 // Set the timeout for the spawn functions
             } else if (!census.miniboss) timer++;
         };
