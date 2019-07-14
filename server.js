@@ -4577,6 +4577,22 @@ var maintainloop = (() => {
                 },
             };
         })();
+    let spawnBoss1 = census => {
+            let spot, i = 30;
+            do { spot = room.randomType('nest'); i--; if (!i) return 0; } while (dirtyCheck(spot, 100));
+            let type = Class.palisade
+            let o = new Entity(spot);
+                o.define(type);
+                o.team = -100;
+    };
+    let spawnBoss2 = census => {
+            let spot, i = 30;
+            do { spot = room.randomType('nest'); i--; if (!i) return 0; } while (dirtyCheck(spot, 100));
+            let type = Class.megaheavy
+            let o = new Entity(spot);
+                o.define(type);
+                o.team = -100;
+    };
         return census => {
             if (timer > 30 && ran.dice(50 - timer)) {
                 util.log('[SPAWN] Preparing to spawn...');
@@ -4611,12 +4627,13 @@ var maintainloop = (() => {
                         choice = [[Class.crasher, Class.crammer, Class.hostileminion, Class.turretry], 21, 'a', 'nest'];
                         break;
                     case 9: 
-                        choice = [[Class.crasher, Class.crammer], 25, 'a', 'nest'];
+                        choice = [[Class.crasher, Class.crammer], 50, 'a', 'nest'];
                         sockets.broadcast('A large wave of Shapes are approaching!');
                         break;
                     case 10: 
-                        choice = [[Class.palisade], 1, 'castle', 'nest']; 
+                        choice = [[Class.crasher, Class.crammer, Class.hostileminion, Class.turretry], 10, 'castle', 'nest']; 
                         sockets.broadcast('A strange trembling...');
+                        spawnBoss1(census);
                         break;
                     case 11: 
                         choice = [[Class.crasher, Class.crammer, Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap], 10, 'a', 'nest'];
@@ -4647,8 +4664,9 @@ var maintainloop = (() => {
                         sockets.broadcast('The Battalion is here.');
                         break;
                     case 20: 
-                        choice = [[Class.megaheavy], 1, 'castle', 'nest']; 
-                        sockets.broadcast('A large shadow is seen across the nest...');
+                        choice = [[Class.crasher, Class.crammer, Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap, Class.sentrySkim, Class.armoredhostileminion], 10, 'castle', 'nest']; 
+                        spawnBoss2(census);
+                        sockets.broadcast('A large shadow is seen across the world...');
                         break;
                 }
                 boss.prepareToSpawn(...choice);
@@ -4696,7 +4714,7 @@ var maintainloop = (() => {
             // Spawning
             //spawnCrasher(census);
             spawnBosses(census);
-            /*/ Bots
+            // Bots
                 if (bots.length < c.BOTS) {
                     let o = new Entity(room.random());
                     o.color = 17;
@@ -4716,7 +4734,6 @@ var maintainloop = (() => {
                         o.skill.maintain();
                     }
                 });
-            */
         };
     })();
     // The big food function
@@ -4853,7 +4870,6 @@ var maintainloop = (() => {
                 [3]: 0, // Penta
                 [4]: 0, // Beta
                 [5]: 0, // Alpha
-                [6]: 0,
                 tank: 0,
                 sum: 0,
             };
@@ -4864,7 +4880,6 @@ var maintainloop = (() => {
                 [3]: 0, // Penta
                 [4]: 0, // Beta
                 [5]: 0, // Alpha
-                [6]: 0,
                 sum: 0,
             };
             // Do the censusNest
