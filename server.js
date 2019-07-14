@@ -4594,6 +4594,12 @@ var maintainloop = (() => {
                     case 3: 
                         choice = [[Class.crasher, Class.crammer, Class.turretry], 8, 'a', 'nest'];
                         break;
+                    case 4: 
+                        choice = [[Class.crasher, Class.crammer, Class.turretry], 12, 'a', 'nest'];
+                        break;
+                    case 5: 
+                        choice = [[Class.crasher, Class.crammer, Class.turretry, Class.minion], 10, 'a', 'nest'];
+                        break;
                     case 10: 
                         choice = [[Class.palisade], 1, 'castle', 'nest']; 
                         sockets.broadcast('A strange trembling...');
