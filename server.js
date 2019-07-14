@@ -71,7 +71,10 @@ const room = {
     room.findType('bas2');
     room.findType('bas3');
     room.findType('bas4');
+    room.findType('pebb');
+    room.findType('grav');
     room.findType('roid');
+    room.findType('ston');
     room.findType('rock');
     room.nestFoodAmount = 1.5 * Math.sqrt(room.nest.length) / room.xgrid / room.ygrid;
     room.random = () => {
@@ -4499,36 +4502,115 @@ var gameloop = (() => {
 })();
 // A less important loop. Runs at an actual 5Hz regardless of game speed.
 var maintainloop = (() => {
-    // Place obstacles
+ // Place obstacles
     function placeRoids() {
         function placeRoid(type, entityClass) {
             let x = 0;
             let position;
-            do { position = room.randomType(type); 
+            do {
+                position = room.randomType(type);
                 x++;
-                if (x>200) { util.warn("Could not place some roids."); return 0; }
+                if (x > 200) {
+                    util.warn("Could not place some roids.");
+                    return 0;
+                }
             } while (dirtyCheck(position, 10 + entityClass.SIZE));
             let o = new Entity(position);
-                o.define(entityClass);
-                o.team = -101;
-                o.facing = ran.randomAngle();
-                o.protect();
-                o.life();
+            o.define(entityClass);
+            o.team = -101;
+            o.facing = ran.randomAngle();
+            o.protect();
+            o.life();
         }
         // Start placing them
-        let roidcount = room.roid.length * room.width * room.height / room.xgrid / room.ygrid / 50000 / 1.5;
-        let rockcount = room.rock.length * room.width * room.height / room.xgrid / room.ygrid / 250000 / 1.5;
+        let rockcount = room.rock.length * room.width * room.height / room.xgrid / room.ygrid / 50000;
         let count = 0;
-        for (let i=Math.ceil(roidcount); i; i--) { count++; placeRoid('roid', Class.obstacle); }
-        for (let i=Math.ceil(roidcount * 0.3); i; i--) { count++; placeRoid('roid', Class.babyObstacle); }
-        for (let i=Math.ceil(rockcount * 0.8); i; i--) { count++; placeRoid('rock', Class.obstacle); }
-        for (let i=Math.ceil(rockcount * 0.5); i; i--) { count++; placeRoid('rock', Class.babyObstacle); }
-        util.log('Placing ' + count + ' obstacles!');
+        for (let i = Math.ceil(rockcount * 1.25); i; i--) {
+            count++;
+            placeRoid('pebb', Class.largeObstacle);
+        }
+        for (let i = Math.ceil(rockcount * 1.25); i; i--) {
+            count++;
+            placeRoid('pebb', Class.obstacle);
+        }
+        for (let i = Math.ceil(rockcount * 1.25); i; i--) {
+            count++;
+            placeRoid('pebb', Class.smallObstacle);
+        }
+        for (let i = Math.ceil(rockcount * 1.25); i; i--) {
+            count++;
+            placeRoid('pebb', Class.babyObstacle);
+        }
+        for (let i = Math.ceil(rockcount * 1.875); i; i--) {
+            count++;
+            placeRoid('grav', Class.largeObstacle);
+        }
+        for (let i = Math.ceil(rockcount * 1.875); i; i--) {
+            count++;
+            placeRoid('grav', Class.obstacle);
+        }
+        for (let i = Math.ceil(rockcount * 1.875); i; i--) {
+            count++;
+            placeRoid('grav', Class.smallObstacle);
+        }
+        for (let i = Math.ceil(rockcount * 1.875); i; i--) {
+            count++;
+            placeRoid('grav', Class.babyObstacle);
+        }
+        for (let i = Math.ceil(rockcount * 2.5); i; i--) {
+            count++;
+            placeRoid('roid', Class.largeObstacle);
+        }
+        for (let i = Math.ceil(rockcount * 2.5); i; i--) {
+            count++;
+            placeRoid('roid', Class.obstacle);
+        }
+        for (let i = Math.ceil(rockcount * 2.5); i; i--) {
+            count++;
+            placeRoid('roid', Class.smallObstacle);
+        }
+        for (let i = Math.ceil(rockcount * 2.5); i; i--) {
+            count++;
+            placeRoid('roid', Class.babyObstacle);
+        }
+        for (let i = Math.ceil(rockcount * 3.75); i; i--) {
+            count++;
+            placeRoid('ston', Class.largeObstacle);
+        }
+        for (let i = Math.ceil(rockcount * 3.75); i; i--) {
+            count++;
+            placeRoid('ston', Class.obstacle);
+        }
+        for (let i = Math.ceil(rockcount * 3.75); i; i--) {
+            count++;
+            placeRoid('ston', Class.smallObstacle);
+        }
+        for (let i = Math.ceil(rockcount * 3.75); i; i--) {
+            count++;
+            placeRoid('ston', Class.babyObstacle);
+        }
+        for (let i = Math.ceil(rockcount * 5); i; i--) {
+            count++;
+            placeRoid('rock', Class.largeObstacle);
+        }
+        for (let i = Math.ceil(rockcount * 5); i; i--) {
+            count++;
+            placeRoid('rock', Class.obstacle);
+        }
+        for (let i = Math.ceil(rockcount * 5); i; i--) {
+            count++;
+            placeRoid('rock', Class.smallObstacle);
+        }
+        for (let i = Math.ceil(rockcount * 5); i; i--) {
+            count++;
+            placeRoid('rock', Class.babyObstacle);
+        }
+        util.log('Placed ' + count + ' rocks!');
     }
     placeRoids();
     // Spawning functions
     let spawnBosses = (() => {
-        let timer = -160;
+        let timer = -60;
         let wave = 1;
         let boss = (() => {
             let i = 0,
@@ -4577,7 +4659,7 @@ var maintainloop = (() => {
             };
         })();
         return census => {
-            if (timer > 120 && ran.dice(200 - timer)) {
+            if (timer > 30 && ran.dice(50 - timer)) {
                 util.log('[SPAWN] Preparing to spawn...');
                 timer = 0;
                 let choice = [];
@@ -4609,10 +4691,6 @@ var maintainloop = (() => {
                     case 8: 
                         choice = [[Class.crasher, Class.crammer, Class.hostileminion, Class.turretry], 21, 'a', 'nest'];
                         break;
-                    /*case 9: 
-                        choice = [[Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap], 17, 'a', 'nest'];
-                        sockets.broadcast('It seems there is drumfire from the depths of hell...');
-                        break;*/
                     case 9: 
                         choice = [[Class.crasher, Class.crammer], 25, 'a', 'nest'];
                         sockets.broadcast('A large wave of Shapes are approaching!');
@@ -4646,7 +4724,7 @@ var maintainloop = (() => {
                         choice = [[Class.crasher, Class.crammer, Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap, Class.sentrySkim, Class.armoredhostileminion], 10, 'a', 'nest'];
                         break;
                     case 19: 
-                        choice = [[Class.hostileminion, Class.turretry, Class.armoredhostileminion], 25, 'a', 'nest'];
+                        choice = [[Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap, Class.sentrySkim, Class.armoredhostileminion], 50, 'a', 'nest'];
                         sockets.broadcast('The Battalion is here.');
                         break;
                     case 20: 
@@ -4655,7 +4733,7 @@ var maintainloop = (() => {
                         break;
                 }
                 boss.prepareToSpawn(...choice);
-                setTimeout(boss.spawn, 120);
+                setTimeout(boss.spawn, 30);
                 // Set the timeout for the spawn functions
             } else if (!census.miniboss) timer++;
         };
