@@ -4617,6 +4617,14 @@ var maintainloop = (() => {
                 o.define(type);
                 o.team = -100;
     };
+    let spawnMiniboss1 = census => {
+            let spot, i = 30;
+            do { spot = room.randomType('nest'); i--; if (!i) return 0; } while (dirtyCheck(spot, 100));
+            let type = Class.sircrashalot
+            let o = new Entity(spot);
+                o.define(type);
+                o.team = -100;
+    };
         return census => {
             if (timer > 45 && ran.dice(60 - timer)) {
                 util.log('[SPAWN] Preparing to spawn...');
@@ -4693,7 +4701,17 @@ var maintainloop = (() => {
                         sockets.broadcast('A large shadow is seen across the world...');
                         break;
                     case 21: 
-                        choice = [[Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap, Class.sentrySkim, Class.armoredhostileminion], 10, 'a', 'nest'];
+                        choice = [[Class.crashertwo, Class.crammertwo, Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap, Class.sentrySkim, Class.armoredhostileminion], 10, 'a', 'nest'];
+                        break;
+                    case 22: 
+                        choice = [[Class.crashertwo, Class.crammertwo, Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap, Class.sentrySkim, Class.armoredhostileminion], 14, 'a', 'nest'];
+                        break;
+                    case 23: 
+                        choice = [[Class.crashertwo, Class.crammertwo, Class.sentryGun, Class.sentryTrap, Class.sentrySkim, Class.armoredhostileminion], 14, 'a', 'nest'];
+                        break;
+                    case 24: 
+                        choice = [[Class.crasherthree, Class.crammerthree, Class.sentryGun, Class.sentryTrap, Class.sentrySkim, Class.armoredhostileminion], 17, 'a', 'nest'];
+                        spawnMiniboss1(census);
                         break;
                 }
                 boss.prepareToSpawn(...choice);
