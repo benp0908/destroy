@@ -4528,8 +4528,8 @@ var maintainloop = (() => {
     placeRoids();
     // Spawning functions
     let spawnBosses = (() => {
-        let timer = 0;
-        let wave = 0;
+        let timer = -160;
+        let wave = 1;
         let boss = (() => {
             let i = 0,
                 names = [],
@@ -4592,13 +4592,30 @@ var maintainloop = (() => {
                         choice = [[Class.crasher, Class.crammer], 8, 'a', 'nest'];
                         break;
                     case 3: 
-                        choice = [[Class.crasher, Class.crammer, Class.turretry], 8, 'a', 'nest'];
+                        choice = [[Class.crasher, Class.crammer, Class.hostileminion], 8, 'a', 'nest'];
                         break;
                     case 4: 
-                        choice = [[Class.crasher, Class.crammer, Class.turretry], 12, 'a', 'nest'];
+                        choice = [[Class.crasher, Class.crammer, Class.hostileminion], 12, 'a', 'nest'];
                         break;
                     case 5: 
-                        choice = [[Class.crasher, Class.crammer, Class.turretry, Class.minion], 10, 'a', 'nest'];
+                        choice = [[Class.crasher, Class.crammer, Class.hostileminion, Class.turretry], 10, 'a', 'nest'];
+                        break;
+                    case 6: 
+                        choice = [[Class.crasher, Class.crammer], 50, 'a', 'nest'];
+                        sockets.broadcast('A large wave of Shapes are approaching!');
+                        break;
+                    case 6: 
+                        choice = [[Class.crasher, Class.crammer, Class.hostileminion, Class.turretry], 15, 'a', 'nest'];
+                        break;
+                    case 7: 
+                        choice = [[Class.crasher, Class.crammer, Class.hostileminion, Class.turretry], 17, 'a', 'nest'];
+                        break;
+                    case 8: 
+                        choice = [[Class.crasher, Class.crammer, Class.hostileminion, Class.turretry], 21, 'a', 'nest'];
+                        break;
+                    case 9: 
+                        choice = [[Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap], 17, 'a', 'nest'];
+                        sockets.broadcast('It seems there is drumfire from the depths of hell...');
                         break;
                     case 10: 
                         choice = [[Class.palisade], 1, 'castle', 'nest']; 
