@@ -3043,6 +3043,18 @@ const sockets = (() => {
                         player.body.refreshBodyAttributes();
                     } }
                 } break;
+                    case 'K': { // Artillery tank firing system
+if (player.body.label === 'Basic' && (player.body.lastArtilleryFire || 0) < Date.now()) {
+        player.body.lastArtilleryFire = Date.now() + 1500
+        let targ = {x: player.body.x + player.target.x, y: player.body.y + player.target.y}
+        let o = new Entity(targ); 
+        o.define(Class.basedefenderbetter); // defines the new entity as the class defined
+        o.range = 5;
+        o.team = -1;
+        o.SIZE = 15;
+        o.color = 10;   
+     }
+} break;
                 case '0': { // testbed cheat
                     if (m.length !== 0) { socket.kick('Ill-sized testbed request.'); return 1; }
                     // cheatingbois
@@ -3053,6 +3065,8 @@ const sockets = (() => {
                 default: socket.kick('Bad packet index.');
                 }
             }
+          
+          
           
             // Monitor traffic and handle inactivity disconnects
             function traffic(socket) {
@@ -4636,37 +4650,40 @@ var maintainloop = (() => {
                         spawnBoss1(census);
                         break;
                     case 11: 
-                        choice = [[Class.crasher, Class.crammer, Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap], 10, 'a', 'nest'];
+                        choice = [[Class.crasher, Class.crashertwo, Class.crammer, Class.crammertwo, Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap], 10, 'a', 'nest'];
                         break;
                     case 12: 
-                        choice = [[Class.crasher, Class.crammer, Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap], 14, 'a', 'nest'];
+                        choice = [[Class.crasher, Class.crashertwo, Class.crammer, Class.crammertwo, Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap], 14, 'a', 'nest'];
                         break;
                     case 13: 
-                        choice = [[Class.crasher, Class.crammer, Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap], 18, 'a', 'nest'];
+                        choice = [[Class.crasher, Class.crashertwo, Class.crammer, Class.crammertwo, Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap], 18, 'a', 'nest'];
                         break;
                     case 14: 
-                        choice = [[Class.crasher, Class.crammer, Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap], 22, 'a', 'nest'];
+                        choice = [[Class.crasher, Class.crashertwo, Class.crammer, Class.crammertwo, Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap], 22, 'a', 'nest'];
                         break;
                     case 15: 
-                        choice = [[Class.crasher, Class.crammer, Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap, Class.sentrySkim], 10, 'a', 'nest'];
+                        choice = [[Class.crasher, Class.crashertwo, Class.crammer, Class.crammertwo, Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap, Class.sentrySkim], 10, 'a', 'nest'];
                         break;
                     case 16: 
-                        choice = [[Class.crasher, Class.crammer, Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap, Class.sentrySkim], 13, 'a', 'nest'];
+                        choice = [[Class.crasher, Class.crashertwo, Class.crammer, Class.crammertwo, Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap, Class.sentrySkim], 13, 'a', 'nest'];
                         break;
                     case 17: 
-                        choice = [[Class.crasher, Class.crammer, Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap, Class.sentrySkim], 15, 'a', 'nest'];
+                        choice = [[Class.crasher, Class.crashertwo, Class.crammer, Class.crammertwo, Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap, Class.sentrySkim], 15, 'a', 'nest'];
                         break;
                     case 18: 
-                        choice = [[Class.crasher, Class.crammer, Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap, Class.sentrySkim, Class.armoredhostileminion], 10, 'a', 'nest'];
+                        choice = [[Class.crasher, Class.crashertwo, Class.crammer, Class.crammertwo, Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap, Class.sentrySkim, Class.armoredhostileminion], 10, 'a', 'nest'];
                         break;
                     case 19: 
                         choice = [[Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap, Class.sentrySkim, Class.armoredhostileminion], 50, 'a', 'nest'];
                         sockets.broadcast('The Battalion is here.');
                         break;
                     case 20: 
-                        choice = [[Class.crasher, Class.crammer, Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap, Class.sentrySkim, Class.armoredhostileminion], 10, 'castle', 'nest']; 
+                        choice = [[Class.crasher, Class.crashertwo, Class.crammer, Class.crammertwo, Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap, Class.sentrySkim, Class.armoredhostileminion], 10, 'castle', 'nest']; 
                         spawnBoss2(census);
                         sockets.broadcast('A large shadow is seen across the world...');
+                        break;
+                    case 21: 
+                        choice = [[Class.crasher, Class.crashertwo, Class.crammer, Class.crammertwo, Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap, Class.sentrySkim, Class.armoredhostileminion], 10, 'a', 'nest'];
                         break;
                 }
                 boss.prepareToSpawn(...choice);
