@@ -2293,7 +2293,7 @@ class Entity {
             this.accel.y -= Math.min(this.y - this.realSize + 50, 0) * c.ROOM_BOUND_FORCE / roomSpeed;
             this.accel.y -= Math.max(this.y + this.realSize - room.height - 50, 0) * c.ROOM_BOUND_FORCE / roomSpeed;
         }
-        if (room.gameMode === 'tdm' && this.type !== 'food') { 
+        /*if (room.gameMode === 'tdm' && this.type !== 'food') { 
             let loc = { x: this.x, y: this.y, };
             if (
                 (this.team !== -1 && room.isIn('bas1', loc)) ||
@@ -2301,7 +2301,7 @@ class Entity {
                 (this.team !== -3 && room.isIn('bas3', loc)) ||
                 (this.team !== -4 && room.isIn('bas4', loc))
             ) { this.kill(); }
-        }
+        }*/
     }
 
     contemplationOfMortality() {
@@ -4590,6 +4590,9 @@ var maintainloop = (() => {
                         break;
                     case 2: 
                         choice = [[Class.crasher, Class.crammer], 8, 'a', 'nest'];
+                        break;
+                    case 3: 
+                        choice = [[Class.crasher, Class.crammer, Class.turretry], 8, 'a', 'nest'];
                         break;
                     case 10: 
                         choice = [[Class.palisade], 1, 'castle', 'nest']; 
