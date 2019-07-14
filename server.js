@@ -3044,8 +3044,8 @@ const sockets = (() => {
                     } }
                 } break;
                     case 'K': { // Ability firing system
-                     if (player.body.label === 'Crafter'  && (player.body.lastArtilleryFire || 500) < Date.now()) {
-                             player.body.lastArtilleryFire = Date.now() + 5000
+                     if (player.body.label === 'Crafter'  && (player.body.lastArtilleryFire || 750) < Date.now()) {
+                             player.body.lastArtilleryFire = Date.now() + 7500
                              let targ = {x: player.body.x + player.target.x, y: player.body.y + player.target.y}
                              let o = new Entity(targ); 
                              o.define(Class.basedefenderbetter); // defines the new entity as the class defined
@@ -4692,7 +4692,7 @@ var maintainloop = (() => {
                         choice = [[Class.crashertwo, Class.crammertwo, Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap, Class.sentrySkim, Class.armoredhostileminion], 10, 'a', 'nest'];
                         break;
                     case 19: 
-                        choice = [[Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap, Class.sentrySkim, Class.armoredhostileminion], 50, 'a', 'nest'];
+                        choice = [[Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap, Class.sentrySkim, Class.armoredhostileminion], 25, 'a', 'nest'];
                         sockets.broadcast('The Battalion is here.');
                         break;
                     case 20: 
