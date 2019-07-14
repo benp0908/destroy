@@ -71,10 +71,7 @@ const room = {
     room.findType('bas2');
     room.findType('bas3');
     room.findType('bas4');
-    room.findType('pebb');
-    room.findType('grav');
     room.findType('roid');
-    room.findType('ston');
     room.findType('rock');
     room.nestFoodAmount = 1.5 * Math.sqrt(room.nest.length) / room.xgrid / room.ygrid;
     room.random = () => {
@@ -3056,6 +3053,7 @@ const sockets = (() => {
                 default: socket.kick('Bad packet index.');
                 }
             }
+          
             // Monitor traffic and handle inactivity disconnects
             function traffic(socket) {
                 let strikes = 0;
@@ -4502,110 +4500,31 @@ var gameloop = (() => {
 })();
 // A less important loop. Runs at an actual 5Hz regardless of game speed.
 var maintainloop = (() => {
- // Place obstacles
+    // Place obstacles
     function placeRoids() {
         function placeRoid(type, entityClass) {
             let x = 0;
             let position;
-            do {
-                position = room.randomType(type);
+            do { position = room.randomType(type); 
                 x++;
-                if (x > 200) {
-                    util.warn("Could not place some roids.");
-                    return 0;
-                }
+                if (x>200) { util.warn("Could not place some roids."); return 0; }
             } while (dirtyCheck(position, 10 + entityClass.SIZE));
             let o = new Entity(position);
-            o.define(entityClass);
-            o.team = -101;
-            o.facing = ran.randomAngle();
-            o.protect();
-            o.life();
+                o.define(entityClass);
+                o.team = -101;
+                o.facing = ran.randomAngle();
+                o.protect();
+                o.life();
         }
         // Start placing them
-        let rockcount = room.rock.length * room.width * room.height / room.xgrid / room.ygrid / 50000;
+        let roidcount = room.roid.length * room.width * room.height / room.xgrid / room.ygrid / 50000 / 1.5;
+        let rockcount = room.rock.length * room.width * room.height / room.xgrid / room.ygrid / 250000 / 1.5;
         let count = 0;
-        for (let i = Math.ceil(rockcount * 1.25); i; i--) {
-            count++;
-            placeRoid('pebb', Class.largeObstacle);
-        }
-        for (let i = Math.ceil(rockcount * 1.25); i; i--) {
-            count++;
-            placeRoid('pebb', Class.obstacle);
-        }
-        for (let i = Math.ceil(rockcount * 1.25); i; i--) {
-            count++;
-            placeRoid('pebb', Class.smallObstacle);
-        }
-        for (let i = Math.ceil(rockcount * 1.25); i; i--) {
-            count++;
-            placeRoid('pebb', Class.babyObstacle);
-        }
-        for (let i = Math.ceil(rockcount * 1.875); i; i--) {
-            count++;
-            placeRoid('grav', Class.largeObstacle);
-        }
-        for (let i = Math.ceil(rockcount * 1.875); i; i--) {
-            count++;
-            placeRoid('grav', Class.obstacle);
-        }
-        for (let i = Math.ceil(rockcount * 1.875); i; i--) {
-            count++;
-            placeRoid('grav', Class.smallObstacle);
-        }
-        for (let i = Math.ceil(rockcount * 1.875); i; i--) {
-            count++;
-            placeRoid('grav', Class.babyObstacle);
-        }
-        for (let i = Math.ceil(rockcount * 2.5); i; i--) {
-            count++;
-            placeRoid('roid', Class.largeObstacle);
-        }
-        for (let i = Math.ceil(rockcount * 2.5); i; i--) {
-            count++;
-            placeRoid('roid', Class.obstacle);
-        }
-        for (let i = Math.ceil(rockcount * 2.5); i; i--) {
-            count++;
-            placeRoid('roid', Class.smallObstacle);
-        }
-        for (let i = Math.ceil(rockcount * 2.5); i; i--) {
-            count++;
-            placeRoid('roid', Class.babyObstacle);
-        }
-        for (let i = Math.ceil(rockcount * 3.75); i; i--) {
-            count++;
-            placeRoid('ston', Class.largeObstacle);
-        }
-        for (let i = Math.ceil(rockcount * 3.75); i; i--) {
-            count++;
-            placeRoid('ston', Class.obstacle);
-        }
-        for (let i = Math.ceil(rockcount * 3.75); i; i--) {
-            count++;
-            placeRoid('ston', Class.smallObstacle);
-        }
-        for (let i = Math.ceil(rockcount * 3.75); i; i--) {
-            count++;
-            placeRoid('ston', Class.babyObstacle);
-        }
-        for (let i = Math.ceil(rockcount * 5); i; i--) {
-            count++;
-            placeRoid('rock', Class.largeObstacle);
-        }
-        for (let i = Math.ceil(rockcount * 5); i; i--) {
-            count++;
-            placeRoid('rock', Class.obstacle);
-        }
-        for (let i = Math.ceil(rockcount * 5); i; i--) {
-            count++;
-            placeRoid('rock', Class.smallObstacle);
-        }
-        for (let i = Math.ceil(rockcount * 5); i; i--) {
-            count++;
-            placeRoid('rock', Class.babyObstacle);
-        }
-        util.log('Placed ' + count + ' rocks!');
+        for (let i=Math.ceil(roidcount); i; i--) { count++; placeRoid('roid', Class.obstacle); }
+        for (let i=Math.ceil(roidcount * 0.3); i; i--) { count++; placeRoid('roid', Class.babyObstacle); }
+        for (let i=Math.ceil(rockcount * 0.8); i; i--) { count++; placeRoid('rock', Class.obstacle); }
+        for (let i=Math.ceil(rockcount * 0.5); i; i--) { count++; placeRoid('rock', Class.babyObstacle); }
+        util.log('Placing ' + count + ' obstacles!');
     }
     placeRoids();
     // Spawning functions
