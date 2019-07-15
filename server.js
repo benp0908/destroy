@@ -4725,7 +4725,7 @@ var maintainloop = (() => {
                 boss.prepareToSpawn(...choice);
                 setTimeout(boss.spawn, 45);
                 // Set the timeout for the spawn functions
-            } else if (!census.miniboss) timer++;
+            } else if (!census.miniboss && !census.crasher) timer++;
         };
     })();
     let spawnCrasher = census => {
