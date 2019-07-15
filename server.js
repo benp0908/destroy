@@ -4718,7 +4718,7 @@ var maintainloop = (() => {
                         spawnMiniboss1(census);
                         break;
                     case 26: 
-                        choice = [[Class.armoredhostileminion], 45, 'a', 'nest'];
+                        choice = [[Class.armoredhostileminion, Class.sentryocto], 45, 'a', 'nest'];
                         spawnMiniboss1(census);
                         break;
                 }
