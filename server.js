@@ -634,7 +634,7 @@ class io_minion extends IO {
         if (this.body.aiSettings.reverseDirection && ran.chance(0.005)) { this.turnwise = -1 * this.turnwise; }
         if (input.target != null && (input.alt || input.main)) {
             let sizeFactor = Math.sqrt(this.body.master.size / this.body.master.SIZE);
-            let leash = (60 * this.body.master.FOV) * sizeFactor;
+            let leash = 60 * (sizeFactor * this.body.master.FOV);
             let orbit = 120 * sizeFactor;
             let repel = 135 * sizeFactor;
             let goal;
@@ -4710,7 +4710,15 @@ var maintainloop = (() => {
                         choice = [[Class.crashertwo, Class.crammertwo, Class.sentryGun, Class.sentryTrap, Class.sentrySkim, Class.armoredhostileminion], 14, 'a', 'nest'];
                         break;
                     case 24: 
-                        choice = [[Class.crasherthree, Class.crammerthree, Class.sentryGun, Class.sentryTrap, Class.sentrySkim, Class.armoredhostileminion], 17, 'a', 'nest'];
+                        choice = [[Class.crasher, Class.crashertwo, Class.crasherthree, Class.sentryGun, Class.sentryTrap], 45, 'a', 'nest'];
+                        spawnMiniboss1(census);
+                        break;
+                    case 25: 
+                        choice = [[Class.crammer, Class.crammertwo, Class.crammerthree, Class.sentryGun, Class.sentryTrap], 45, 'a', 'nest'];
+                        spawnMiniboss1(census);
+                        break;
+                    case 26: 
+                        choice = [[Class.armoredhostileminion], 45, 'a', 'nest'];
                         spawnMiniboss1(census);
                         break;
                 }
