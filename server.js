@@ -634,7 +634,7 @@ class io_minion extends IO {
         if (this.body.aiSettings.reverseDirection && ran.chance(0.005)) { this.turnwise = -1 * this.turnwise; }
         if (input.target != null && (input.alt || input.main)) {
             let sizeFactor = Math.sqrt(this.body.master.size / this.body.master.SIZE);
-            let leash = 60 * (sizeFactor * this.body.master.FOV);
+            let leash = 100 * (sizeFactor * this.body.master.FOV);
             let orbit = 120 * sizeFactor;
             let repel = 135 * sizeFactor;
             let goal;
@@ -642,7 +642,7 @@ class io_minion extends IO {
             let target = new Vector(input.target.x, input.target.y);
             if (input.alt) {
                 // Leash
-                if (target.length < leash) {
+                if (target.length > leash) {
                     goal = {
                         x: this.body.x + target.x,
                         y: this.body.y + target.y,
