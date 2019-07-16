@@ -11,8 +11,8 @@
   "runSpeed": 1,
   "maxHeartbeatInterval": 300000,
   "verbose": true,
-  "WIDTH": 3500,
-  "HEIGHT": 3500,
+  "WIDTH": 4500,
+  "HEIGHT": 4500,
   "MODE": "tdm",
   "TEAMS": 1,
   "RANDOM_COLORS": false,
@@ -62,6 +62,6 @@
   "MIN_SPEED": 0.001,
   "FOOD_AMOUNT": 0.1, 
   "SKILL_BOOST": 5,
-  "BOTS": 0,
+  "BOTS": 5,
   "GLASS_HEALTH_FACTOR": 2
 }

@@ -4769,13 +4769,13 @@ var maintainloop = (() => {
             spawnBosses(census);
             // Bots
                 if (bots.length < c.BOTS) {
-                    let o = new Entity(room.random());
-                    o.color = 17;
+                    let o = new Entity(room.randomType('bas1'));
+                    o.color = 10;
                     o.define(Class.bot);
                     o.define(Class.basic);
                     o.name += ran.chooseBotName();
                     o.refreshBodyAttributes();
-                    o.color = 17;
+                    o.team = -1
                     bots.push(o);
                 }
                 // Remove dead ones
