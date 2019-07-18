@@ -644,7 +644,7 @@ class io_minion extends IO {
             let target = new Vector(input.target.x, input.target.y);
             if (input.alt) {
                 // Leash
-                if (target.length > leash) {
+                if (target.length < leash) {
                     goal = {
                         x: this.body.x + target.x,
                         y: this.body.y + target.y,
