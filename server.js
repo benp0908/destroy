@@ -68,6 +68,8 @@ const room = {
     room.findType('nest');
     room.findType('norm');
     room.findType('bas1');
+    room.findType('bap1');
+    room.findType('bap1');
     room.findType('bas2');
     room.findType('bas3');
     room.findType('bas4');
@@ -634,7 +636,7 @@ class io_minion extends IO {
         if (this.body.aiSettings.reverseDirection && ran.chance(0.005)) { this.turnwise = -1 * this.turnwise; }
         if (input.target != null && (input.alt || input.main)) {
             let sizeFactor = Math.sqrt(this.body.master.size / this.body.master.SIZE);
-            let leash = 100 * (sizeFactor * this.body.master.FOV);
+            let leash = (100 * sizeFactor) * this.body.master.FOV;
             let orbit = 120 * sizeFactor;
             let repel = 135 * sizeFactor;
             let goal;
@@ -4617,7 +4619,15 @@ var maintainloop = (() => {
                 o.define(type);
                 o.team = -100;
     };
-    let spawnMiniboss1 = census => {
+    let spawnSiegeboss1 = census => {
+            let spot, i = 30;
+            do { spot = room.randomType('nest'); i--; if (!i) return 0; } while (dirtyCheck(spot, 100));
+            let type = Class.panzer
+            let o = new Entity(spot);
+                o.define(type);
+                o.team = -100;
+    };
+    let spawnSiegeboss2 = census => {
             let spot, i = 30;
             do { spot = room.randomType('nest'); i--; if (!i) return 0; } while (dirtyCheck(spot, 100));
             let type = Class.sircrashalot
@@ -4677,7 +4687,9 @@ var maintainloop = (() => {
                         choice = [[Class.crashertwo, Class.crammertwo, Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap], 18, 'a', 'nest'];
                         break;
                     case 14: 
-                        choice = [[Class.crashertwo, Class.crammertwo, Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap], 22, 'a', 'nest'];
+                        choice = [[Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap], 22, 'a', 'nest'];
+                        sockets.broadcast('The siege ensues.');
+                        spawnSiegeboss1(census);
                         break;
                     case 15: 
                         choice = [[Class.crashertwo, Class.crammertwo, Class.hostileminion, Class.turretry, Class.sentryGun, Class.sentryTrap, Class.sentrySkim], 10, 'a', 'nest'];
@@ -4711,21 +4723,21 @@ var maintainloop = (() => {
                         break;
                     case 24: 
                         choice = [[Class.crasher, Class.crashertwo, Class.crasherthree, Class.sentryGun, Class.sentryTrap], 45, 'a', 'nest'];
-                        spawnMiniboss1(census);
+                        spawnSiegeboss2(census);
                         break;
                     case 25: 
                         choice = [[Class.crammer, Class.crammertwo, Class.crammerthree, Class.sentryGun, Class.sentryTrap], 45, 'a', 'nest'];
-                        spawnMiniboss1(census);
+                        spawnSiegeboss2(census);
                         break;
                     case 26: 
                         choice = [[Class.armoredhostileminion, Class.sentryocto], 45, 'a', 'nest'];
-                        spawnMiniboss1(census);
+                        spawnSiegeboss2(census);
                         break;
                 }
                 boss.prepareToSpawn(...choice);
                 setTimeout(boss.spawn, 45);
                 // Set the timeout for the spawn functions
-            } else if (!census.miniboss && !census.crasher) timer++;
+            } else if (!census.miniboss && !census.crasher && census.tank) timer++;
         };
     })();
     let spawnCrasher = census => {
