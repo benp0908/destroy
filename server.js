@@ -4670,7 +4670,7 @@ var maintainloop = (() => {
                         choice = [[Class.crasher, Class.crammer, Class.hostileminion, Class.turretry], 21, 'a', 'nest'];
                         break;
                     case 9: 
-                        choice = [[Class.crasher, Class.crammer], 50, 'a', 'nest'];
+                        choice = [[Class.crasher, Class.crammer], 150, 'a', 'nest'];
                         sockets.broadcast('A large wave of Shapes are approaching!');
                         break;
                     case 10: 
