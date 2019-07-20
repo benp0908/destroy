@@ -4596,7 +4596,7 @@ var maintainloop = (() => {
                 spawn: () => {
                     sockets.broadcast(begin);
                     for (let i=0; i<n; i++) {
-                        setTimeout(spawn, ran.randomRange(35, 50));
+                        setTimeout(spawn, ran.randomRange(30, 50));
                     }
                     // Wrap things up.
                     setTimeout(() => sockets.broadcast(arrival), 50);
@@ -4623,7 +4623,7 @@ var maintainloop = (() => {
     let spawnSiegeboss1 = census => {
             let spot, i = 30;
             do { spot = room.randomType('nest'); i--; if (!i) return 0; } while (dirtyCheck(spot, 100));
-            let type = Class.panzer
+            let type = Class.siegebossi
             let o = new Entity(spot);
                 o.define(type);
                 o.team = -100;
@@ -4637,7 +4637,7 @@ var maintainloop = (() => {
                 o.team = -100;
     };
         return census => {
-            if (timer > 45 && ran.dice(60 - timer)) {
+            if (timer > 30 && ran.dice(45 - timer)) {
                 util.log('[SPAWN] Preparing to spawn...');
                 timer = 0;
                 let choice = [];
@@ -4736,7 +4736,7 @@ var maintainloop = (() => {
                         break;
                 }
                 boss.prepareToSpawn(...choice);
-                setTimeout(boss.spawn, 45);
+                setTimeout(boss.spawn, 30);
                 // Set the timeout for the spawn functions
             } else if (!census.miniboss && !census.crasher && census.tank) timer++;
         };
