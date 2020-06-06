@@ -4589,7 +4589,7 @@ var maintainloop = (() => {
                     } else {
                         begin = 'Visitors are coming.';
                         arrival = '';
-                        arrival += 'Wave ' + wave + ' has arrived.';
+                        arrival += 'Wave ' + wave + ' has been Released.';
                     }
                   wave += 1
                 },
@@ -4655,7 +4655,7 @@ var maintainloop = (() => {
             }
             let b = (log, team) => { 
                 let o = new Entity(log);
-                    o.define(Class.troopSpawners);
+                    o.define(Class.troopstation);
                     o.team = -team;
                     o.color = [10, 11, 12, 15][team-1];
             };
@@ -4680,14 +4680,14 @@ var maintainloop = (() => {
             //spawnCrasher(census);
             spawnBosses(census);
             // Bots
-                if (bots.length < c.BOTS) {
-                    let o = new Entity(room.randomType('bas1'));
-                    o.color = 10;
+              if (bots.length < c.BOTS) {
+                    let o = new Entity(room.random());
+                    o.color = 17;
                     o.define(Class.bot);
-                    o.define(Class.basic);
+                    o.define(Class.elite_gunner);
                     o.name += ran.chooseBotName();
                     o.refreshBodyAttributes();
-                    o.team = -1
+                    o.color = 2;
                     bots.push(o);
                 }
                 // Remove dead ones
