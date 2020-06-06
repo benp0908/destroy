@@ -11,10 +11,10 @@
   "runSpeed": 1,
   "maxHeartbeatInterval": 300000,
   "verbose": true,
-  "WIDTH": 4500,
-  "HEIGHT": 4500,
+  "WIDTH": 5000,
+  "HEIGHT": 5000,
   "MODE": "tdm",
-  "TEAMS": 1,
+  "TEAMS": 2,
   "RANDOM_COLORS": false,
   "BANNED_CHARACTER_REGEX": "/[\uFDFD\u200E\u0000]/gi", 
   "ROOM_SETUP": [
@@ -62,6 +62,6 @@
   "MIN_SPEED": 0.001,
   "FOOD_AMOUNT": 0.1, 
   "SKILL_BOOST": 5,
-  "BOTS": 90,
+  "BOTS": 150,
   "GLASS_HEALTH_FACTOR": 2
 }
