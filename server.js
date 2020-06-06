@@ -70,7 +70,6 @@ const room = {
     room.findType('bas1');
     room.findType('bap1');
     room.findType('mbc1');
-    room.findType('las1');
     room.findType('bas2');
     room.findType('bas3');
     room.findType('bas4');
@@ -4662,19 +4661,7 @@ var maintainloop = (() => {
             };
             for (let i=1; i<2; i++) {
                 room['mbc' + i].forEach((log) => { b(log, i); }); 
-            };
-            let y = (log, team) => { 
-                let o = new Entity(log);
-                    o.define(Class.bigauto4gun);
-                    o.team = -team;
-                    o.color = [10, 11, 12, 15][team-1];
-            };
-            for (let i=1; i<2; i++) {
-                room['las' + i].forEach((log) => { b(log, i); }); 
             }
-     
-      
-      
         // Return the spawning function
         let bots = [];
         return () => {
