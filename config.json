@@ -18,13 +18,13 @@
   "RANDOM_COLORS": false,
   "BANNED_CHARACTER_REGEX": "/[\uFDFD\u200E\u0000]/gi", 
   "ROOM_SETUP": [
-    [ "norm", "nest", "nest", "nest", "nest", "nest", "nest" ],
-    [ "norm", "norm", "norm", "norm", "norm", "norm", "nest" ],
-    [ "norm", "norm", "norm", "norm", "norm", "norm", "nest" ],
-    [ "norm", "norm", "mbc1", "bas1", "mbc1", "norm", "nest" ],
-    [ "norm", "norm", "norm", "bas1", "norm", "norm", "nest" ],
-    [ "norm", "norm", "norm", "norm", "norm", "norm", "nest" ],
-    [ "norm", "nest", "nest", "nest", "nest", "nest", "nest" ]
+    [ "norm", "norm", "norm", "norm", "norm", "norm", "norm" ],
+    [ "norm", "norm", "norm", "norm", "norm", "norm", "norm" ],
+    [ "norm", "nest", "nest", "nest", "nest", "nest", "norm" ],
+    [ "norm", "nest", "mbc1", "bas1", "mbc1", "nest", "norm" ],
+    [ "norm", "nest", "nest", "bas1", "nest", "nest", "norm" ],
+    [ "norm", "norm", "nest", "nest", "nest", "norm", "norm" ],
+    [ "norm", "norm", "norm", "norm", "norm", "norm", "norm" ]
   ],
   "X_GRID": 7,
   "Y_GRID": 7,
