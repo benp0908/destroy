@@ -68,7 +68,6 @@ const room = {
     room.findType('nest');
     room.findType('norm');
     room.findType('bas1');
-    room.findType('bmaz');
     room.findType('bap1');
     room.findType('mbc1');
     room.findType('bas2');
@@ -4662,14 +4661,6 @@ var maintainloop = (() => {
             };
             for (let i=1; i<2; i++) {
                 room['mbc' + i].forEach((log) => { b(log, i); }); 
-              };
-        let maz = (loc, team) => { 
-                let o = new Entity(loc);
-                    o.define(Class.mazewall);
-                    o.team = -50;
-            };
-            for (let i=1; i<5; i++) {
-                room['bmaz'].forEach((loc) => { maz(loc, i); }); 
             }
         // Return the spawning function
         let bots = [];
