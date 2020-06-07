@@ -8,7 +8,7 @@
   "networkFallbackTime": 150,
   "visibleListInterval": 1000,
   "gameSpeed": 1.125,
-  "runSpeed": 1,
+  "runSpeed": 1.25,
   "maxHeartbeatInterval": 300000,
   "verbose": true,
   "WIDTH": 5000,
