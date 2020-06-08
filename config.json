@@ -11,7 +11,7 @@
   "runSpeed": 1.50,
   "maxHeartbeatInterval": 300000,
   "verbose": true,
-  "WIDTH": 5000,
+  "WIDTH": 4000,
   "HEIGHT": 4000,
   "MODE": "tdm",
   "TEAMS": 2,
