@@ -3074,12 +3074,10 @@ const sockets = (() => {
                     // cheatingbois
                     if (player.body != null) { if (socket.key === process.env.SECRET) {
                         player.body.define(Class.testbed);
-                      } }
-                  // cheatierbois
-                  if (player.body != null) { if (bt_tokens === process.env.beta_tester_tokens) {
-                        player.body.define(Class.testbeda);
-                        player.body.sendMessage('Beta User mode Entered!');
-                  } break;
+                       player.body.sendMessage('Ill-sized testbed request.');
+
+                    } }
+                } break;
                 default: socket.kick('Bad packet index.');
                 }
             }
