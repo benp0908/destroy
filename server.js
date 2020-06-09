@@ -73,6 +73,9 @@ const room = {
     room.findType('bas2');
     room.findType('bas3');
     room.findType('bas4');
+    room.findType('prti');
+    room.findType('prto');
+    room.findType('port');
     room.findType('lgb1');
     room.findType('roid');
     room.findType('rock');
