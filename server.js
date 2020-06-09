@@ -4622,7 +4622,7 @@ var maintainloop = (() => {
                 let choice = [];
                 switch (wave) {
                     case 0: 
-                        choice = [[Class.elite_gunner], 3, 'a', 'nest'];
+                        choice = [[Class.troopstation], 3, 'a', 'nest'];
                         break;
                     case 1: 
                         choice = [[Class.elite_gunner], 6, 'a', 'nest'];
@@ -4655,32 +4655,9 @@ var maintainloop = (() => {
                         choice = [[Class.elite_gunner], 3, 'a', 'nest'];
                         break;
                     case 11: 
-                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
+                        choice = [[Class.troopstation], 6, 'a', 'nest'];
                         break;
-                     case 12: 
-                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
-                        break;
-                     case 13: 
-                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
-                        break;
-                     case 14: 
-                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
-                        break;
-                    case 15: 
-                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
-                        break;
-                     case 16: 
-                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
-                        break;
-                    case 17: 
-                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
-                        break;
-                    case 18: 
-                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
-                        break;
-                       case 19: 
-                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
-                        break;
+                
                 }
                 boss.prepareToSpawn(...choice);
                 setTimeout(boss.spawn, 30);
