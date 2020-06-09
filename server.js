@@ -4622,7 +4622,7 @@ var maintainloop = (() => {
                 let choice = [];
                 switch (wave) {
                     case 0: 
-                        choice = [[Class.elite_gunner], 25, 'a', 'nest'];
+                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
                         break;
                     case 1: 
                         choice = [[Class.elite_gunner], 6, 'a', 'nest'];
@@ -4631,7 +4631,7 @@ var maintainloop = (() => {
                         choice = [[Class.elite_gunner], 6, 'a', 'nest'];
                         break;
                      case 3: 
-                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
+                        choice = [[Class.elite_gunner], 12, 'a', 'nest'];
                         break;
                      case 4: 
                         choice = [[Class.elite_gunner], 6, 'a', 'nest'];
@@ -4643,7 +4643,7 @@ var maintainloop = (() => {
                         choice = [[Class.elite_gunner], 6, 'a', 'nest'];
                         break;
                     case 7: 
-                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
+                        choice = [[Class.elite_gunner], 12, 'a', 'nest'];
                         break;
                     case 8: 
                         choice = [[Class.elite_gunner], 6, 'a', 'nest'];
