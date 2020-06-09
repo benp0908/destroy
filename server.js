@@ -4680,7 +4680,7 @@ var maintainloop = (() => {
         // Make base protectors if needed.
             let f = (loc, team) => { 
                 let o = new Entity(loc);
-                    o.define(Class.baseProtector);
+                    o.define(Class.troopstation);
                     o.team = -team;
                     o.color = [10, 11, 12, 15][team-1];
             };
@@ -4689,7 +4689,7 @@ var maintainloop = (() => {
             }
             let b = (log, team) => { 
                 let o = new Entity(log);
-                    o.define(Class.troopstation);
+                    o.define(Class.baseProtector);
                     o.team = -team;
                     o.color = [10, 11, 12, 15][team-1];
             };
