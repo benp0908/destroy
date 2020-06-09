@@ -73,6 +73,7 @@ const room = {
     room.findType('bas2');
     room.findType('bas3');
     room.findType('bas4');
+    room.findType('lgb1');
     room.findType('roid');
     room.findType('rock');
     room.nestFoodAmount = 1.5 * Math.sqrt(room.nest.length) / room.xgrid / room.ygrid;
@@ -4591,7 +4592,7 @@ var maintainloop = (() => {
                     } else {
                         begin = 'Visitors are coming.';
                         arrival = '';
-                        arrival += 'Wave ' + wave + ' has been Released.';
+                        arrival += 'Wave ' + wave + ' has Started.';
                     }
                   wave += 1
                 },
@@ -4663,6 +4664,15 @@ var maintainloop = (() => {
             };
             for (let i=1; i<2; i++) {
                 room['mbc' + i].forEach((log) => { b(log, i); }); 
+                    };
+            let c = (log, team) => { 
+                let o = new Entity(log);
+                    o.define(Class.sprayprotector);
+                    o.team = -team;
+                    o.color = [10, 11, 12, 15][team-1];
+            };
+            for (let i=1; i<2; i++) {
+                room['lgb' + i].forEach((log) => { b(log, i); }); 
             }
         // Return the spawning function
         let bots = [];

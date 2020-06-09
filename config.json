@@ -22,7 +22,7 @@
     [ "norm", "norm", "norm", "norm", "norm", "norm", "norm" ],
     [ "norm", "nest", "nest", "nest", "nest", "nest", "norm" ],
     [ "norm", "nest", "nest", "nest", "nest", "nest", "norm" ],
-    [ "norm", "nest", "nest", "nest", "nest", "noest", "norm" ],
+    [ "norm", "norm", "nest", "norm", "nest", "norm", "norm" ],
     [ "norm", "nest", "nest", "nest", "nest", "nest", "norm" ],
     [ "norm", "nest", "mbc1", "bas1", "mbc1", "nest", "norm" ]
   ],
