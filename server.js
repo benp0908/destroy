@@ -4559,7 +4559,7 @@ var maintainloop = (() => {
     placeRoids();
     // Spawning functions
     let spawnBosses = (() => {
-        let timer = 0;
+        let timer = 8;
         let wave = 1;
         let boss = (() => {
             let i = 0,
@@ -4622,7 +4622,7 @@ var maintainloop = (() => {
                 let choice = [];
                 switch (wave) {
                     case 0: 
-                        choice = [[Class.troopstation], 3, 'a', 'nest'];
+                        choice = [[Class.elite_gunner], 25, 'a', 'nest'];
                         break;
                     case 1: 
                         choice = [[Class.elite_gunner], 6, 'a', 'nest'];
@@ -4631,7 +4631,7 @@ var maintainloop = (() => {
                         choice = [[Class.elite_gunner], 6, 'a', 'nest'];
                         break;
                      case 3: 
-                        choice = [[Class.elite_gunner], 12, 'a', 'nest'];
+                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
                         break;
                      case 4: 
                         choice = [[Class.elite_gunner], 6, 'a', 'nest'];
@@ -4646,16 +4646,16 @@ var maintainloop = (() => {
                         choice = [[Class.elite_gunner], 6, 'a', 'nest'];
                         break;
                     case 8: 
-                        choice = [[Class.troopstation], 6, 'a', 'nest'];
+                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
                         break;
                        case 9: 
                         choice = [[Class.elite_gunner], 6, 'a', 'nest'];
                         break;
                             case 10: 
-                        choice = [[Class.elite_gunner], 3, 'a', 'nest'];
+                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
                         break;
                     case 11: 
-                        choice = [[Class.closerarena], 6, 'a', 'nest'];
+                        choice = [[Class.elite_gunner], 20, 'a', 'nest'];
                         break;
                 
                 }
