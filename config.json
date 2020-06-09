@@ -18,7 +18,7 @@
   "RANDOM_COLORS": false,
   "BANNED_CHARACTER_REGEX": "/[\uFDFD\u200E\u0000]/gi", 
   "ROOM_SETUP": [
-    [ "norm", "norm", "norm", "norm", "norm", "norm", "norm" ],
+    [ "norm", "norm", "norm", "prti", "norm", "norm", "prot" ],
     [ "norm", "norm", "nest", "nest", "nest", "norm", "norm" ],
     [ "norm", "nest", "norm", "nest", "nest", "nest", "norm" ],
     [ "norm", "nest", "bas1", "lgb1", "bas1", "nest", "norm" ],
