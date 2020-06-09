@@ -4613,7 +4613,8 @@ var maintainloop = (() => {
             let type = Class.elite_gunner
             let o = new Entity(spot);
                 o.define(type);
-                o.team = -100;
+                      o.color = -100;
+
     };
         return census => {
             if (timer > 30 && ran.dice(45 - timer)) {
