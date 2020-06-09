@@ -4590,7 +4590,7 @@ var maintainloop = (() => {
                         begin = 'A visitor is coming.';
                         arrival = names[0] + ' has arrived.'; 
                     } else {
-                        begin = 'Visitors are coming.';
+                        begin = 'The 8 Second Cool Down has Ended.';
                         arrival = '';
                         arrival += 'Wave ' + wave + ' has Started.';
                     }
@@ -4599,10 +4599,10 @@ var maintainloop = (() => {
                 spawn: () => {
                     sockets.broadcast(begin);
                     for (let i=0; i<n; i++) {
-                        setTimeout(spawn, ran.randomRange(30, 50));
+                        setTimeout(spawn, ran.randomRange(10, 10));
                     }
                     // Wrap things up.
-                    setTimeout(() => sockets.broadcast(arrival), 50);
+                    setTimeout(() => sockets.broadcast(arrival), 10);
                     util.log('[SPAWN] ' + arrival);
                 },
             };
@@ -4610,7 +4610,7 @@ var maintainloop = (() => {
     let spawnBoss1 = census => {
             let spot, i = 30;
             do { spot = room.randomType('nest'); i--; if (!i) return 0; } while (dirtyCheck(spot, 100));
-            let type = Class.supercrasher
+            let type = Class.elite_gunner
             let o = new Entity(spot);
                 o.define(type);
                 o.team = -100;
@@ -4622,10 +4622,64 @@ var maintainloop = (() => {
                 let choice = [];
                 switch (wave) {
                     case 0: 
-                        choice = [[Class.crasher], 3, 'a', 'nest'];
+                        choice = [[Class.elite_gunner], 3, 'a', 'nest'];
                         break;
                     case 1: 
-                        choice = [[Class.crasher], 6, 'a', 'nest'];
+                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
+                        break;
+                     case 2: 
+                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
+                        break;
+                     case 3: 
+                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
+                        break;
+                     case 4: 
+                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
+                        break;
+                    case 5: 
+                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
+                        break;
+                     case 6: 
+                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
+                        break;
+                    case 7: 
+                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
+                        break;
+                    case 8: 
+                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
+                        break;
+                       case 9: 
+                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
+                        break;
+                            case 10: 
+                        choice = [[Class.elite_gunner], 3, 'a', 'nest'];
+                        break;
+                    case 11: 
+                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
+                        break;
+                     case 12: 
+                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
+                        break;
+                     case 13: 
+                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
+                        break;
+                     case 14: 
+                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
+                        break;
+                    case 15: 
+                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
+                        break;
+                     case 16: 
+                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
+                        break;
+                    case 17: 
+                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
+                        break;
+                    case 18: 
+                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
+                        break;
+                       case 19: 
+                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
                         break;
                 }
                 boss.prepareToSpawn(...choice);
