@@ -4590,9 +4590,9 @@ var maintainloop = (() => {
                         begin = 'A visitor is coming.';
                         arrival = names[0] + ' has arrived.'; 
                     } else {
-                        begin = 'The 8 Second Cool Down has Ended.';
+                        begin = 'Night has Ended';
                         arrival = '';
-                        arrival += 'Wave ' + wave + ' has Started.';
+                        arrival += 'Night ' + wave + ' has Started. Get to safe Fast!';
                     }
                   wave += 1
                 },
@@ -4625,13 +4625,13 @@ var maintainloop = (() => {
                         choice = [[Class.elite_gunner], 3, 'a', 'nest'];
                         break;
                     case 1: 
-                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
+                        choice = [[Class.closestation], 6, 'a', 'nest'];
                         break;
                      case 2: 
                         choice = [[Class.elite_gunner], 6, 'a', 'nest'];
                         break;
                      case 3: 
-                        choice = [[Class.elite_gunner], 12, 'a', 'nest'];
+                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
                         break;
                      case 4: 
                         choice = [[Class.elite_gunner], 6, 'a', 'nest'];
@@ -4655,32 +4655,9 @@ var maintainloop = (() => {
                         choice = [[Class.elite_gunner], 3, 'a', 'nest'];
                         break;
                     case 11: 
-                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
+                        choice = [[Class.troopstation], 6, 'a', 'nest'];
                         break;
-                     case 12: 
-                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
-                        break;
-                     case 13: 
-                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
-                        break;
-                     case 14: 
-                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
-                        break;
-                    case 15: 
-                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
-                        break;
-                     case 16: 
-                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
-                        break;
-                    case 17: 
-                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
-                        break;
-                    case 18: 
-                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
-                        break;
-                       case 19: 
-                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
-                        break;
+                  
                 }
                 boss.prepareToSpawn(...choice);
                 setTimeout(boss.spawn, 30);
