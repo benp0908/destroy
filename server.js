@@ -3409,7 +3409,9 @@ const sockets = (() => {
                     // Mark it as spawned
                     socket.status.hasSpawned = true;
                     body.sendMessage('You have spawned! Welcome to the game.');
-                    body.sendMessage('You will be invulnerable until you move or shoot.');
+                    body.sendMessage('Good Luck!');
+                    body.sendMessage('The Idea of this Game is to Protect the BLUE Base and not let the Red Attackers Destroy your Teams 2 Main Bases.');
+
                     // Move the client camera
                     socket.talk('c', socket.camera.x, socket.camera.y, socket.camera.fov);
                     return player;
