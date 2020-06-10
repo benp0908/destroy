@@ -4634,7 +4634,7 @@ var maintainloop = (() => {
                         choice = [[Class.elite_gunner], 6, 'a', 'nest'];
                         break;
                      case 2: 
-                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
+                        choice = [[Class.closerarena], 6, 'a', 'nest'];
                         break;
                      case 3: 
                         choice = [[Class.elite_gunner], 12, 'a', 'nest'];
@@ -4661,7 +4661,7 @@ var maintainloop = (() => {
                         choice = [[Class.elite_gunner], 20, 'a', 'nest'];
                         break;
                     case 11: 
-                        choice = [[Class.closerarena], 15, 'a', 'nest'];
+                        choice = [[Class.elite_gunner], 15, 'a', 'nest'];
                    
                 
                 }
