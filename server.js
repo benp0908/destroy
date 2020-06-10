@@ -4633,9 +4633,6 @@ var maintainloop = (() => {
                     case 1: 
                         choice = [[Class.elite_gunner], 6, 'a', 'nest'];
                         break;
-                      case 1: 
-                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
-                        break;
                      case 2: 
                         choice = [[Class.elite_gunner], 6, 'a', 'nest'];
                         break;
@@ -4664,11 +4661,8 @@ var maintainloop = (() => {
                         choice = [[Class.elite_gunner], 20, 'a', 'nest'];
                         break;
                     case 11: 
-                        choice = [[Class.closerarena], 25, 'a', 'nest'];
-                        break;
-                     case 12: 
-                        choice = [[Class.troopstation], 20, 'a', 'nest'];
-                        break;
+                        choice = [[Class.closerarena], 15, 'a', 'nest'];
+                   
                 
                 }
                 boss.prepareToSpawn(...choice);
