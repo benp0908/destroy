@@ -4628,16 +4628,43 @@ var maintainloop = (() => {
                 let choice = [];
                 switch (wave) {
                     case 0: 
-                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
+                        choice = [[Class.elite_gunner], 6, 'a', 'bas1'];
                         break;
                     case 1: 
-                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
+                        choice = [[Class.elite_gunner], 6, 'a', 'bas1'];
                         break;
                      case 2: 
-                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
+                        choice = [[Class.elite_gunner], 6, 'a', 'bas1'];
                         break;
                      case 3: 
-                        choice = [[Class.closerarena], 12, 'a', 'nest'];
+                        choice = [[Class.elite_gunner], 12, 'a', 'bas1'];
+                       break;
+                     case 4: 
+                        choice = [[Class.elite_gunner], 12, 'a', 'bas1'];
+                        break;
+                    case 5: 
+                        choice = [[Class.elite_gunner], 12, 'a', 'bas1'];
+                        break;
+                     case 6: 
+                        choice = [[Class.elite_gunner], 15, 'a', 'bas1'];
+                        break;
+                    case 7: 
+                        choice = [[Class.elite_gunner], 15, 'a', 'bas1'];
+                        break;
+                    case 8: 
+                        choice = [[Class.elite_gunner], 15, 'a', 'bas1'];
+                        break;
+                       case 9: 
+                        choice = [[Class.elite_gunner], 15, 'a', 'bas1'];
+                        break;
+                            case 10: 
+                        choice = [[Class.elite_gunner], 20, 'a', 'bas1'];
+                        break;
+                    case 11: 
+                        choice = [[Class.closerarena], 15, 'a', 'bas1'];
+                           break;
+                    case 12: 
+                        choice = [[Class.closerarena], 15, 'a', 'bas1'];
        
                    
                 
