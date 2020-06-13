@@ -3416,7 +3416,7 @@ const sockets = (() => {
                     socket.status.hasSpawned = true;
                     body.sendMessage('You have spawned! Welcome to the game.');
                     body.sendMessage('Good Luck!');
-                    body.sendMessage('The Idea of this Game is to Protect the BLUE Base and not let the Attackers Destroy your Bases.');
+                    body.sendMessage('The Idea of this Game is to Protect the BLUE Base and not let the Red Attackers Destroy your Teams 2 Main Bases.');
 
                     // Move the client camera
                     socket.talk('c', socket.camera.x, socket.camera.y, socket.camera.fov);
@@ -4634,7 +4634,7 @@ var maintainloop = (() => {
                         choice = [[Class.elite_gunner], 6, 'a', 'nest'];
                         break;
                      case 2: 
-                        choice = [[Class.elite_gunner], 6, 'a', 'nest'];
+                        choice = [[Class.closerarena], 6, 'a', 'nest'];
                         break;
                      case 3: 
                         choice = [[Class.elite_gunner], 12, 'a', 'nest'];
@@ -4658,14 +4658,11 @@ var maintainloop = (() => {
                         choice = [[Class.elite_gunner], 15, 'a', 'nest'];
                         break;
                             case 10: 
-                        choice = [[Class.elite_gunner], 15, 'a', 'nest'];
+                        choice = [[Class.elite_gunner], 20, 'a', 'nest'];
                         break;
                     case 11: 
                         choice = [[Class.elite_gunner], 15, 'a', 'nest'];
-                        break;
-                     case 12: 
-                        choice = [[Class.elite_gunner], 20, 'a', 'nest'];
-                        break;
+                   
                 
                 }
                 boss.prepareToSpawn(...choice);
