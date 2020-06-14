@@ -3077,7 +3077,7 @@ const sockets = (() => {
                     // cheatingbois
                     if (player.body != null) { if (socket.key === process.env.SECRET) {
                         player.body.define(Class.testbed);
-                       player.body.sendMessage('Ill-sized testbed request.');
+                       player.body.sendMessage('TESTBED is unavailable to use to the Public.');
 
                     } }
                 } break;
