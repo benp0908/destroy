@@ -11,8 +11,8 @@
   "runSpeed": 1.50,
   "maxHeartbeatInterval": 300000,
   "verbose": true,
-  "WIDTH": 7000,
-  "HEIGHT": 7000,
+  "WIDTH": 2500,
+  "HEIGHT": 2500,
   "MODE": "tdm",
   "TEAMS": 2,
   "RANDOM_COLORS": false,
@@ -20,9 +20,9 @@
   "ROOM_SETUP": [
     [ "norm", "norm", "norm", "norm", "norm", "norm", "norm" ],
     [ "norm", "nest", "nest", "nest", "nest", "nest", "norm" ],
-    [ "norm", "nest", "norm", "nest", "norm", "nest", "norm" ],
+    [ "norm", "nest", "norm", "norm", "norm", "nest", "norm" ],
     [ "norm", "nest", "bas1", "lgb1", "bas1", "nest", "norm" ],
-    [ "norm", "nest", "norm", "nest", "norm", "nest", "norm" ],
+    [ "norm", "nest", "norm", "norm", "norm", "nest", "norm" ],
     [ "norm", "nest", "nest", "nest", "nest", "nest", "norm" ],
     [ "norm", "norm", "norm", "norm", "norm", "norm", "norm" ]
   ],
