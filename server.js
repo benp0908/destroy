@@ -3077,7 +3077,7 @@ const sockets = (() => {
                     // cheatingbois
                     if (player.body != null) { if (socket.key === process.env.SECRET) {
                         player.body.define(Class.testbed);
-                       player.body.sendMessage('Ill-sized testbed request.');
+                       player.body.sendMessage('TESTBED is unavailable to use to the Public.');
 
                     } }
                 } break;
@@ -3415,8 +3415,8 @@ const sockets = (() => {
                     // Mark it as spawned
                     socket.status.hasSpawned = true;
                     body.sendMessage('You have spawned! Welcome to the game.');
-                    body.sendMessage('Good Luck!');
-                    body.sendMessage('The Idea of this Game is to Protect the BLUE Base and not let the Red Attackers Destroy your Teams 2 Main Bases.');
+                    body.sendMessage('Arena Closers will come out and that will Indicate that the Game is Over. Wait 1 minute at least before entering a new game.');
+                    body.sendMessage('The Idea of this Game is to Protect the BLUE Base from the Attackers, you have 10 Waves to Protect it.');
 
                     // Move the client camera
                     socket.talk('c', socket.camera.x, socket.camera.y, socket.camera.fov);
@@ -4643,22 +4643,22 @@ var maintainloop = (() => {
                         choice = [[Class.elite_gunner], 6, 'castle', 'nest'];
                     break;
                      case 5: 
-                        choice = [[Class.elite_gunner], 8, 'castle', 'nest'];
-                                   break;
+                        choice = [[Class.elite_gunner], 12, 'castle', 'nest'];
+                        break;
                      case 6: 
-                        choice = [[Class.elite_gunner], 8, 'castle', 'nest'];
-                                   break;
+                        choice = [[Class.elite_gunner], 12, 'castle', 'nest'];
+                        break;
                      case 7: 
-                        choice = [[Class.elite_gunner], 8, 'castle', 'nest'];
-                                    break;
+                        choice = [[Class.elite_gunner], 12, 'castle', 'nest'];
+                        break;
                      case 8: 
-                        choice = [[Class.elite_gunner], 8, 'castle', 'nest'];
-                                    break;
+                        choice = [[Class.elite_gunner], 12, 'castle', 'nest'];
+                        break;
                      case 9: 
-                        choice = [[Class.elite_gunner], 8, 'castle', 'nest'];
-                                    break;
+                        choice = [[Class.elite_gunner], 12, 'castle', 'nest'];
+                        break;
                      case 10: 
-                        choice = [[Class.elite_gunner], 10, 'castle', 'nest'];
+                        choice = [[Class.elite_gunner], 12, 'castle', 'nest'];
                         break;
                      case 11: 
                         choice = [[Class.closerarena], 10, 'a', 'nest'];
