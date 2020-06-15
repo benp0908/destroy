@@ -4663,7 +4663,7 @@ var maintainloop = (() => {
                      case 11: 
                         choice = [[Class.closerarena], 10, 'a', 'nest'];
                         break;
-                     case 13: 
+                     case 12: 
                         choice = [[Class.closerarena], 12, 'a', 'nest'];
        
                    
