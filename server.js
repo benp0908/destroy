@@ -3003,7 +3003,7 @@ const sockets = (() => {
                     if (player.command != null && player.body != null) {
                         player.command[given] = !player.command[given];
                         // Send a message.
-                        player.body.sendMessage(given.charAt(0).toUpperCase() + given.slice(1) + ((player.command[given]) ? ' ON' : ' OFF'));
+                        player.body.sendMessage(given.charAt(0).toUpperCase() + given.slice(1) + ((player.command[given]) ? ' enabled.' : ' disabled.'));
                     }
                 } break;
                 case 'U': { // upgrade request
