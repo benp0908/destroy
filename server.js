@@ -4628,36 +4628,57 @@ var maintainloop = (() => {
                 switch (wave) {
                     case 0: 
                         choice = [[Class.elite_gunner], 3, 'castle', 'nest'];
+                         sockets.broadcast('3 Attackers have Spawned!');
+
                         break;
                     case 1: 
                         choice = [[Class.elite_gunner], 3, 'castle', 'nest'];
+                                             sockets.broadcast('3 Attackers have Spawned!');
+
                       break;
                      case 2: 
                         choice = [[Class.elite_gunner], 3, 'castle', 'nest'];
+                                             sockets.broadcast('3 Attackers have Spawned!');
+
                         break;
                      case 3: 
                         choice = [[Class.elite_gunner], 6, 'castle', 'nest'];
+                                             sockets.broadcast('6 Attackers have Spawned!');
+
                     break;
                      case 4: 
                         choice = [[Class.elite_gunner], 6, 'castle', 'nest'];
+                                                                 sockets.broadcast('6 Attackers have Spawned!');
+
                     break;
                      case 5: 
                         choice = [[Class.elite_gunner], 12, 'castle', 'nest'];
+                                                                 sockets.broadcast('12 Attackers have Spawned!');
+
                         break;
                      case 6: 
                         choice = [[Class.elite_gunner], 12, 'castle', 'nest'];
+                                                                                     sockets.broadcast('12 Attackers have Spawned!');
+
                         break;
                      case 7: 
                         choice = [[Class.elite_gunner], 12, 'castle', 'nest'];
-                        break;
+                        break;                                                                 sockets.broadcast('12 Attackers have Spawned!');
+
                      case 8: 
                         choice = [[Class.elite_gunner], 12, 'castle', 'nest'];
+                                                                                     sockets.broadcast('12 Attackers have Spawned!');
+
                         break;
                      case 9: 
                         choice = [[Class.elite_gunner], 12, 'castle', 'nest'];
+                                                                                     sockets.broadcast('12 Attackers have Spawned!');
+
                         break;
                      case 10: 
                         choice = [[Class.elite_gunner], 12, 'castle', 'nest'];
+                                                                                     sockets.broadcast('12 Attackers have Spawned!');
+
                         break;
                      case 11: 
                         choice = [[Class.closerarena], 10, 'a', 'nest'];
