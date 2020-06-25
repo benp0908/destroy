@@ -1,6 +1,4 @@
-# Arras.ioQ Private Server TemplQq
-
-ate
+# Arras.io Private Server Template
 
 ## Quick Start Guide
 
