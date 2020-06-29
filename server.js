@@ -4628,42 +4628,69 @@ var maintainloop = (() => {
                 switch (wave) {
                     case 0: 
                         choice = [[Class.elite_gunner], 3, 'castle', 'nest'];
+                         sockets.broadcast('3 Attackers have Spawned!');
+
                         break;
                     case 1: 
                         choice = [[Class.elite_gunner], 3, 'castle', 'nest'];
+                                             sockets.broadcast('3 Attackers have Spawned!');
+
                       break;
                      case 2: 
                         choice = [[Class.elite_gunner], 3, 'castle', 'nest'];
+                                             sockets.broadcast('3 Attackers have Spawned!');
+
                         break;
                      case 3: 
                         choice = [[Class.elite_gunner], 6, 'castle', 'nest'];
+                                             sockets.broadcast('6 Attackers have Spawned!');
+
                     break;
                      case 4: 
                         choice = [[Class.elite_gunner], 6, 'castle', 'nest'];
+                                                                 sockets.broadcast('6 Attackers have Spawned!');
+
                     break;
                      case 5: 
-                        choice = [[Class.elite_gunner], 12, 'castle', 'nest'];
+                        choice = [[Class.elite_gunner], 6, 'castle', 'nest'];
+                                                                 sockets.broadcast('6 Attackers have Spawned!');
+
                         break;
                      case 6: 
-                        choice = [[Class.elite_gunner], 12, 'castle', 'nest'];
+                        choice = [[Class.elite_gunner], 10, 'castle', 'nest'];
+                                                                                     sockets.broadcast('10 Attackers have Spawned!');
+
                         break;
                      case 7: 
-                        choice = [[Class.elite_gunner], 12, 'castle', 'nest'];
-                        break;
+                        choice = [[Class.elite_gunner], 10, 'castle', 'nest'];
+                        break;                                                                 sockets.broadcast('10 Attackers have Spawned!');
+
                      case 8: 
-                        choice = [[Class.elite_gunner], 12, 'castle', 'nest'];
+                        choice = [[Class.elite_gunner], 10, 'castle', 'nest'];
+                                                                                     sockets.broadcast('10 Attackers have Spawned!');
+
                         break;
                      case 9: 
                         choice = [[Class.elite_gunner], 12, 'castle', 'nest'];
+                                                                                     sockets.broadcast('11 Attackers have Spawned!');
+
                         break;
                      case 10: 
                         choice = [[Class.elite_gunner], 12, 'castle', 'nest'];
+                                                                                     sockets.broadcast('11 Attackers have Spawned!');
+
                         break;
                      case 11: 
                         choice = [[Class.closerarena], 10, 'a', 'nest'];
+                        sockets.broadcast('Arena Closed: No players can join!');
+                        sockets.broadcast('BLUE DEFENDERS HAVE WON THE GAME!');
+
+
                         break;
                      case 12: 
                         choice = [[Class.closerarena], 12, 'a', 'nest'];
+                                            sockets.broadcast('Closing!');
+
        
                    
                 
@@ -4732,14 +4759,14 @@ var maintainloop = (() => {
             //spawnCrasher(census);
             spawnBosses(census);
             // Bots
-              if (bots.length < c.BOTS) {
-                    let o = new Entity(room.random());
-                    o.color = 90;
+                if (bots.length < c.BOTS) {
+                    let o = new Entity(room.randomType('bas1'));
+                    o.color = 10;
                     o.define(Class.bot);
-                    o.define(Class.elite_gunner);
+                    o.define(Class.basic);
                     o.name += ran.chooseBotName();
                     o.refreshBodyAttributes();
-                    o.color = 90;
+                    o.team = -1
                     bots.push(o);
                 }
                 // Remove dead ones
