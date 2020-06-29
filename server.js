@@ -3414,8 +3414,10 @@ const sockets = (() => {
                     // Mark it as spawned
                     socket.status.hasSpawned = true;
                     body.sendMessage('You have spawned! Welcome to the game.');
-                    body.sendMessage('Arena Closers will come out and that will Indicate that the Game is Over. Wait 1 minute at least before entering a new game.');
-                    body.sendMessage('The Idea of this Game is to Protect the BLUE Base from the Attackers, you have 10 Waves to Protect it.');
+                                      body.sendMessage('This Server was created by King Arras!');
+
+                        sockets.broadcast('A player has joined the game!');
+
 
                     // Move the client camera
                     socket.talk('c', socket.camera.x, socket.camera.y, socket.camera.fov);
