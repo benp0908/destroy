@@ -4671,12 +4671,12 @@ var maintainloop = (() => {
 
                         break;
                      case 9: 
-                        choice = [[Class.elite_gunner], 11, 'castle', 'nest'];
+                        choice = [[Class.elite_gunner], 12, 'castle', 'nest'];
                                                                                      sockets.broadcast('11 Attackers have Spawned!');
 
                         break;
                      case 10: 
-                        choice = [[Class.elite_gunner], 11, 'castle', 'nest'];
+                        choice = [[Class.elite_gunner], 12, 'castle', 'nest'];
                                                                                      sockets.broadcast('11 Attackers have Spawned!');
 
                         break;
@@ -4689,7 +4689,7 @@ var maintainloop = (() => {
                         break;
                      case 12: 
                         choice = [[Class.closerarena], 12, 'a', 'nest'];
-                                            sockets.broadcast('Closing and Restarting...');
+                                            sockets.broadcast('Closing!');
 
        
                    
