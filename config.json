@@ -20,15 +20,15 @@
   "ROOM_SETUP": [
     [ "norm","norm","norm", "norm","norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm"   ],
     [ "norm","norm","norm", "norm","norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm"   ],
-    [ "norm","norm","norm", "norm","norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm"   ],
+    [ "norm","norm","norm", "norm","norm", "norm", "bas1", "norm", "norm", "norm", "norm", "norm", "norm"   ],
     [ "norm","norm","norm","norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm"   ],
-    [ "norm","norm","norm","norm", "bas1", "nest", "nest", "nest", "bas1", "norm", "norm", "norm", "norm"   ],
+    [ "norm","norm","norm","norm", "nest", "nest", "nest", "nest", "nest", "norm", "norm", "norm", "norm"   ],
     [ "norm","norm","norm","norm", "nest", "norm", "norm", "norm", "nest", "norm", "norm", "norm", "norm"   ],
-    [ "norm","norm","norm","norm", "nest", "norm", "lgb1", "norm", "nest", "norm", "norm", "norm", "norm"   ],
+    [ "norm","norm","bas1","norm", "nest", "norm", "lgb1", "norm", "nest", "norm", "bas1", "norm", "norm"   ],
     [ "norm","norm","norm","norm", "nest", "norm", "norm", "norm", "nest", "norm", "norm", "norm", "norm"   ],
-    [ "norm","norm","norm","norm", "bas1", "nest", "nest", "nest", "bas1", "norm", "norm", "norm", "norm"   ],
+    [ "norm","norm","norm","norm", "nest", "nest", "nest", "nest", "nest", "norm", "norm", "norm", "norm"   ],
     [ "norm","norm","norm","norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm"   ],
-    [ "norm","norm","norm","norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm"   ],
+    [ "norm","norm","norm","norm", "norm", "norm", "bas1", "norm", "norm", "norm", "norm", "norm", "norm"   ],
     [ "norm","norm","norm", "norm","norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm"   ],
     [ "norm","norm","norm", "norm","norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm"   ]
 
@@ -64,10 +64,12 @@
   "TIER_1": 15,
   "TIER_2": 30,
   "TIER_3": 45,
+  "TIER_4": 60,
 
-  "SKILL_CAP": 45,
+
+  "SKILL_CAP": 60,
   "SKILL_SOFT_CAP": 0,
-  "SKILL_CHEAT_CAP": 45,
+  "SKILL_CHEAT_CAP": 60,
   "SKILL_LEAK": 0,
   "STEALTH": 4,
   "MIN_SPEED": 4,
