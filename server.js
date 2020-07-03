@@ -4688,7 +4688,7 @@ var maintainloop = (() => {
                         break;
                      case 12: 
                         choice = [[Class.closerarena], 12, 'a', 'nest'];
-                                            sockets.broadcast('Closing!');
+                                            sockets.broadcast('Closing and Restarting...');
 
        
                    
