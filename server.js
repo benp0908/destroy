@@ -4558,32 +4558,8 @@ var maintainloop = (() => {
         for (let i=Math.ceil(roidcount * 0.3); i; i--) { count++; placeRoid('roid', Class.babyObstacle); }
         for (let i=Math.ceil(rockcount * 0.8); i; i--) { count++; placeRoid('rock', Class.obstacle); }
         for (let i=Math.ceil(rockcount * 0.5); i; i--) { count++; placeRoid('rock', Class.babyObstacle); }
- util.log('Placing ' + count + ' obstacles!');
+        util.log('Placing ' + count + ' obstacles!');
     }
-  let createDom = (loc, mode, type) => {
-      let o = new Entity(loc)
-      o.define(type)
-      o.team = mode || -100
-      o.color = [3, 10, 11, 12, 15][-mode]
-      o.ondeath = () => {
-
-        createDom2(loc, -2, ran.choose([ Class.gunnerDominator, Class.destroyerDominator, Class.trapDominator]));
-      };
-    }
-  let createDom2 = (loc, mode, type) => {
-      let o = new Entity(loc)
-      o.define(type)
-      o.team = mode || -100
-      o.color = [3, 10, 11, 12, 15][-mode]
-      o.ondeath = () => {
-
-        createDom(loc, -1, ran.choose([ Class.gunnerDominator, Class.destroyerDominator, Class.trapDominator]));
-      };
-    }
-  
-  if (room.gameMode === 'tdm') room['domi'].forEach((loc) => { createDom(loc, -1, ran.choose([ Class.gunnerDominator, Class.destroyerDominator, Class.trapDominator])); }); 
-  if (room.gameMode === 'tdm') room['dom1'].forEach((loc) => { createDom(loc, -1, ran.choose([ Class.gunnerDominator, Class.destroyerDominator, Class.trapDominator])); }); 
-  if (room.gameMode === 'tdm') room['dom2'].forEach((loc) => { createDom(loc, -2, ran.choose([ Class.gunnerDominator, Class.destroyerDominator, Class.trapDominator])); }); 
     placeRoids();
     // Spawning functions
     let spawnBosses = (() => {
