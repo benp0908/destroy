@@ -4627,28 +4627,28 @@ var maintainloop = (() => {
                 let choice = [];
                 switch (wave) {
                     case 0: 
-                        choice = [[Class.elite_gunner], 3, 'castle', 'nest'];
-                         sockets.broadcast('3 Attackers have Spawned!');
+                        choice = [[Class.elite_spray], 3, 'castle', 'nest'];
+                         sockets.broadcast('3 Elite Sprayers have Spawned!');
 
                         break;
                     case 1: 
                         choice = [[Class.elite_gunner], 3, 'castle', 'nest'];
-                                             sockets.broadcast('3 Attackers have Spawned!');
+                                             sockets.broadcast('3 Elite Gunners has Spawned!');
 
                       break;
                      case 2: 
-                        choice = [[Class.elite_gunner], 3, 'castle', 'nest'];
-                                             sockets.broadcast('3 Attackers have Spawned!');
+                        choice = [[Class.elite_destroyer], 3, 'castle', 'nest'];
+                                             sockets.broadcast('3 Elite Destroyer has Spawned!');
 
                         break;
                      case 3: 
-                        choice = [[Class.elite_gunner], 6, 'castle', 'nest'];
-                                             sockets.broadcast('6 Attackers have Spawned!');
+                        choice = [[Class.palisade], 1, 'castle', 'nest'];
+                                             sockets.broadcast('The Rogue Palisade has Spawned!');
 
                     break;
                      case 4: 
-                        choice = [[Class.elite_gunner], 6, 'castle', 'nest'];
-                                                                 sockets.broadcast('6 Attackers have Spawned!');
+                        choice = [[Class.elite_spray], 6, 'castle', 'nest'];
+                                             sockets.broadcast('6 Elite Gunners has Spawned!');
 
                     break;
                      case 5: 
@@ -5050,7 +5050,7 @@ let server = http.createServer((req, res) => {
   switch (pathname) {
     case '/':
       res.writeHead(200)
-      res.end(`<!DOCTYPE html><h3>Arras</h3><button onclick="location.href = 'https://arras.io/#host=' + location.host">Open</button>`)
+      res.end(`<!DOCTYPE html><h3>The Original Game is at ka2-arras.glitch.me</h3>`)
     break
     case '/mockups.json':
       res.setHeader('Access-Control-Allow-Origin', '*')
