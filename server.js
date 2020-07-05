@@ -4627,28 +4627,28 @@ var maintainloop = (() => {
                 let choice = [];
                 switch (wave) {
                     case 0: 
-                        choice = [[Class.elite_spray], 3, 'castle', 'nest'];
-                         sockets.broadcast('3 Elite Sprayers have Spawned!');
+                        choice = [[Class.elite_gunner], 3, 'castle', 'nest'];
+                         sockets.broadcast('3 Attackers have Spawned!');
 
                         break;
                     case 1: 
                         choice = [[Class.elite_gunner], 3, 'castle', 'nest'];
-                                             sockets.broadcast('3 Elite Gunners has Spawned!');
+                                             sockets.broadcast('3 Attackers have Spawned!');
 
                       break;
                      case 2: 
-                        choice = [[Class.elite_destroyer], 3, 'castle', 'nest'];
-                                             sockets.broadcast('3 Elite Destroyer has Spawned!');
+                        choice = [[Class.elite_gunner], 3, 'castle', 'nest'];
+                                             sockets.broadcast('3 Attackers have Spawned!');
 
                         break;
                      case 3: 
-                        choice = [[Class.palisade], 1, 'castle', 'nest'];
-                                             sockets.broadcast('The Rogue Palisade has Spawned!');
+                        choice = [[Class.elite_gunner], 6, 'castle', 'nest'];
+                                             sockets.broadcast('6 Attackers have Spawned!');
 
                     break;
                      case 4: 
-                        choice = [[Class.elite_spray], 6, 'castle', 'nest'];
-                                             sockets.broadcast('6 Elite Gunners has Spawned!');
+                        choice = [[Class.elite_gunner], 6, 'castle', 'nest'];
+                                                                 sockets.broadcast('6 Attackers have Spawned!');
 
                     break;
                      case 5: 
