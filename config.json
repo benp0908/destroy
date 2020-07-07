@@ -18,19 +18,19 @@
   "RANDOM_COLORS": false,
   "BANNED_CHARACTER_REGEX": "/[\uFDFD\u200E\u0000]/gi", 
   "ROOM_SETUP": [
-    ["bas1", "norm","norm", "norm","norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm",  "bas1"    ],
     ["norm", "norm","norm", "norm","norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm",  "norm"    ],
     ["norm", "norm","norm", "norm","norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm",  "norm"    ],
-    ["norm", "norm","norm","bas1", "nest", "nest", "nest", "nest", "nest", "bas1", "norm", "norm",  "norm"    ],
+    ["norm", "norm","norm", "norm","norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm",  "norm"    ],
+    ["norm", "norm","norm","nest", "nest", "nest", "bas1", "nest", "nest", "nest", "norm", "norm",  "norm"    ],
     ["norm", "norm","norm","nest", "norm", "norm", "norm", "norm", "norm", "nest", "norm", "norm",  "norm"    ],
     ["norm", "norm","norm","nest", "norm", "norm", "norm", "norm", "norm", "nest", "norm", "norm",  "norm"    ],
-    ["norm","norm","norm","nest", "norm", "norm", "lgb1", "norm", "norm", "nest", "norm",  "norm",  "norm"    ],
+    ["norm","norm","norm","bas1", "norm", "norm", "lgb1", "norm", "norm", "bas1", "norm",  "norm",  "norm"    ],
     ["norm","norm","norm","nest", "norm", "norm", "norm", "norm", "norm", "nest", "norm",  "norm",  "norm"    ],
     ["norm","norm","norm","nest", "norm", "norm", "norm", "norm", "norm", "nest", "norm",  "norm",  "norm"    ],
-    ["norm", "norm","norm","bas1", "nest", "nest", "nest", "nest", "nest", "bas1", "norm", "norm",  "norm"    ],
+    ["norm", "norm","norm","nest", "nest", "nest", "bas1", "nest", "nest", "nest", "norm", "norm",  "norm"    ],
     ["norm", "norm","norm","norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm",  "norm"    ],
     ["norm","norm","norm", "norm","norm", "norm", "norm", "norm", "norm", "norm", "norm",  "norm",  "norm"    ],
-    ["bas1","norm","norm", "norm","norm", "norm", "norm", "norm", "norm", "norm", "norm",  "norm",  "bas1"    ]
+    ["norm","norm","norm", "norm","norm", "norm", "norm", "norm", "norm", "norm", "norm",  "norm",  "norm"    ]
 
 
 
