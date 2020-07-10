@@ -69,8 +69,6 @@ const room = {
     room.findType('norm');
     room.findType('bas1');
     room.findType('bap1');
-    room.findType('bap3');
-
     room.findType('mbc1');
     room.findType('bas2');
     room.findType('bas3');
@@ -4629,18 +4627,18 @@ var maintainloop = (() => {
                 let choice = [];
                 switch (wave) {
                     case 0: 
-                        choice = [[Class.elite_gunner], 2, 'castle', 'nest'];
-                         sockets.broadcast('2 Attackers have Spawned!');
+                        choice = [[Class.elite_gunner], 3, 'castle', 'nest'];
+                         sockets.broadcast('3 Attackers have Spawned!');
 
                         break;
                     case 1: 
-                        choice = [[Class.elite_sprayer], 2, 'castle', 'nest'];
-                                             sockets.broadcast('2 Attackers have Spawned!');
+                        choice = [[Class.elite_gunner], 3, 'castle', 'nest'];
+                                             sockets.broadcast('3 Attackers have Spawned!');
 
                       break;
                      case 2: 
-                        choice = [[Class.elite_destroyer], 2, 'castle', 'nest'];
-                                             sockets.broadcast('2 Attackers have Spawned!');
+                        choice = [[Class.elite_gunner], 3, 'castle', 'nest'];
+                                             sockets.broadcast('3 Attackers have Spawned!');
 
                         break;
                      case 3: 
@@ -4683,7 +4681,7 @@ var maintainloop = (() => {
 
                         break;
                      case 11: 
-                        choice = [[Class.closerarena], 10, 'a', 'norm'];
+                        choice = [[Class.closerarena], 10, 'a', 'nest'];
                         sockets.broadcast('Arena Closed: No players can join!');
                         sockets.broadcast('BLUE DEFENDERS HAVE WON THE GAME!');
 
@@ -5052,7 +5050,7 @@ let server = http.createServer((req, res) => {
   switch (pathname) {
     case '/':
       res.writeHead(200)
-      res.end(`<!DOCTYPE html><h3>The Original Game is at ka2-arras.glitch.me</h3>`)
+      res.end(`<!DOCTYPE html><h3>Arras</h3><button onclick="location.href = 'https://arras.io/#host=' + location.host">Open</button>`)
     break
     case '/mockups.json':
       res.setHeader('Access-Control-Allow-Origin', '*')
