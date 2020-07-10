@@ -4627,18 +4627,18 @@ var maintainloop = (() => {
                 let choice = [];
                 switch (wave) {
                     case 0: 
-                        choice = [[Class.elite_gunner], 3, 'castle', 'nest'];
-                         sockets.broadcast('3 Attackers have Spawned!');
+                        choice = [[Class.elite_gunner], 2, 'castle', 'nest'];
+                         sockets.broadcast('2 Attackers have Spawned!');
 
                         break;
                     case 1: 
-                        choice = [[Class.elite_gunner], 3, 'castle', 'nest'];
-                                             sockets.broadcast('3 Attackers have Spawned!');
+                        choice = [[Class.elite_sprayer], 2, 'castle', 'nest'];
+                                             sockets.broadcast('2 Attackers have Spawned!');
 
                       break;
                      case 2: 
-                        choice = [[Class.elite_gunner], 3, 'castle', 'nest'];
-                                             sockets.broadcast('3 Attackers have Spawned!');
+                        choice = [[Class.elite_destroyer], 2, 'castle', 'nest'];
+                                             sockets.broadcast('2 Attackers have Spawned!');
 
                         break;
                      case 3: 
