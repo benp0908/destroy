@@ -69,6 +69,8 @@ const room = {
     room.findType('norm');
     room.findType('bas1');
     room.findType('bap1');
+    room.findType('bap3');
+
     room.findType('mbc1');
     room.findType('bas2');
     room.findType('bas3');
