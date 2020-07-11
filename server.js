@@ -4628,22 +4628,18 @@ var maintainloop = (() => {
                 switch (wave) {
                     case 0: 
                         choice = [[Class.elite_gunner], 3, 'castle', 'nest'];
-                         sockets.broadcast('3 Attackers have Spawned!');
 
                         break;
                     case 1: 
                         choice = [[Class.elite_gunner], 3, 'castle', 'nest'];
-                                             sockets.broadcast('3 Attackers have Spawned!');
 
                       break;
                      case 2: 
                         choice = [[Class.elite_gunner], 3, 'castle', 'nest'];
-                                             sockets.broadcast('3 Attackers have Spawned!');
 
                         break;
                      case 3: 
                         choice = [[Class.elite_gunner], 6, 'castle', 'nest'];
-                                             sockets.broadcast('6 Attackers have Spawned!');
 
                     break;
                      case 4: 
@@ -4672,24 +4668,23 @@ var maintainloop = (() => {
                         break;
                      case 9: 
                         choice = [[Class.elite_gunner], 10, 'castle', 'nest'];
-                                                                                     sockets.broadcast('12 Attackers have Spawned!');
 
                         break;
                      case 10: 
                         choice = [[Class.elite_gunner], 10, 'castle', 'nest'];
-                                                                                     sockets.broadcast('12 Attackers have Spawned!');
 
                         break;
                      case 11: 
                         choice = [[Class.closerarena], 10, 'a', 'nest'];
-                        sockets.broadcast('Arena Closed: No players can join!');
-                        sockets.broadcast('BLUE DEFENDERS HAVE WON THE GAME!');
+                        sockets.broadcast('YOUR TEAM HAS WON THE GAME!');
+                                            sockets.broadcast('Arena Closed: No players can join!');
+
 
 
                         break;
                      case 12: 
                         choice = [[Class.closerarena], 12, 'a', 'nest'];
-                                            sockets.broadcast('Closing!');
+                                            sockets.broadcast('Closing...');
 
        
                    
