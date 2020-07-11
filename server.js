@@ -77,8 +77,6 @@ const room = {
     room.findType('prto');
     room.findType('port');
     room.findType('lgb1');
-    room.findType('lgb3');
-
     room.findType('roid');
     room.findType('rock');
     room.nestFoodAmount = 1.5 * Math.sqrt(room.nest.length) / room.xgrid / room.ygrid;

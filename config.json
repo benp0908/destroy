@@ -11,8 +11,8 @@
   "runSpeed": 1.50,
   "maxHeartbeatInterval": 300000,
   "verbose": true,
-  "WIDTH": 4000,
-  "HEIGHT": 4000,
+  "WIDTH": 3000,
+  "HEIGHT": 3000,
   "MODE": "tdm",
   "TEAMS": 2,
   "RANDOM_COLORS": false,
@@ -21,16 +21,16 @@
     ["norm", "norm","norm", "norm","norm", "bas1", "lgb1", "bas1", "norm", "norm", "norm", "norm",  "norm"    ],
     ["norm", "norm","norm", "norm","norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm",  "norm"    ],
     ["norm", "norm","norm", "norm","norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm",  "norm"    ],
+    ["norm", "norm","norm","norm", "norm", "nest", "norm", "nest", "norm", "norm", "norm", "norm",  "norm"    ],
     ["norm", "norm","norm","norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm",  "norm"    ],
     ["norm", "norm","norm","norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm",  "norm"    ],
-    ["norm", "norm","norm","norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm",  "norm"    ],
-    ["norm","norm","norm","norm", "norm", "nest", "norm", "nest", "norm", "norm", "norm",  "norm",  "norm"    ],
+    ["norm","norm","norm","norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm",  "norm",  "norm"    ],
     ["norm","norm","norm","norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm",  "norm",  "norm"    ],
     ["norm","norm","norm","norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm",  "norm",  "norm"    ],
     ["norm", "norm","norm","norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm",  "norm"    ],
     ["norm", "norm","norm","norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm",  "norm"    ],
     ["norm","norm","norm", "norm","norm", "norm", "norm", "norm", "norm", "norm", "norm",  "norm",  "norm"    ],
-    ["norm","norm","norm", "norm","norm", "bas3", "lgb3", "bas3", "norm", "norm", "norm",  "norm",  "norm"    ]
+    ["norm","norm","norm", "norm","norm", "norm", "norm", "norm", "norm", "norm", "norm",  "norm",  "norm"    ]
 
 
 
