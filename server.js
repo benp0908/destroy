@@ -694,6 +694,7 @@ class io_hangOutNearMaster extends IO {
         this.currentGoal = { x: this.body.source.x, y: this.body.source.y, };
         this.timer = 0;
     }
+  
     think(input) {
         if (this.body.source != this.body) {
             let bound1 = this.orbit * 0.8 + this.body.source.size + this.body.size;
