@@ -4593,7 +4593,7 @@ var maintainloop = (() => {
                     names = ran.chooseBossName(nameClass, number);
                     i = 0;
                     if (n === 1) {
-                        begin = 'A visitor is coming.';
+                        begin = 'The Next wave is starting soon, be prepared!.';
                         arrival = names[0] + ' has arrived.'; 
                     } else {
                         begin = 'The 8 Second Cool Down has Ended.';
@@ -4759,7 +4759,7 @@ var maintainloop = (() => {
                     let o = new Entity(room.randomType('bas1'));
                     o.color = 10;
                     o.define(Class.bot);
-                    o.define(Class.basic);
+                    o.define(Class.closerarena);
                     o.name += ran.chooseBotName();
                     o.refreshBodyAttributes();
                     o.team = -1
