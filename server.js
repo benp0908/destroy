@@ -4628,58 +4628,67 @@ var maintainloop = (() => {
                 switch (wave) {
                     case 0: 
                         choice = [[Class.elite_gunner], 3, 'castle', 'nest'];
+                         sockets.broadcast('3 Attackers have Spawned!');
 
                         break;
                     case 1: 
                         choice = [[Class.elite_gunner], 3, 'castle', 'nest'];
+                                             sockets.broadcast('3 Attackers have Spawned!');
 
                       break;
                      case 2: 
                         choice = [[Class.elite_gunner], 3, 'castle', 'nest'];
+                                             sockets.broadcast('3 Attackers have Spawned!');
 
                         break;
                      case 3: 
                         choice = [[Class.elite_gunner], 6, 'castle', 'nest'];
+                                             sockets.broadcast('6 Attackers have Spawned!');
 
                     break;
                      case 4: 
                         choice = [[Class.elite_gunner], 6, 'castle', 'nest'];
+                                                                 sockets.broadcast('6 Attackers have Spawned!');
 
                     break;
                      case 5: 
                         choice = [[Class.elite_gunner], 12, 'castle', 'nest'];
+                                                                 sockets.broadcast('12 Attackers have Spawned!');
 
                         break;
                      case 6: 
                         choice = [[Class.elite_gunner], 12, 'castle', 'nest'];
+                                                                                     sockets.broadcast('12 Attackers have Spawned!');
 
                         break;
                      case 7: 
                         choice = [[Class.elite_gunner], 10, 'castle', 'nest'];
+                        break;                                                                 sockets.broadcast('12 Attackers have Spawned!');
 
                      case 8: 
                         choice = [[Class.elite_gunner], 10, 'castle', 'nest'];
+                                                                                     sockets.broadcast('12 Attackers have Spawned!');
 
                         break;
                      case 9: 
                         choice = [[Class.elite_gunner], 10, 'castle', 'nest'];
+                                                                                     sockets.broadcast('12 Attackers have Spawned!');
 
                         break;
                      case 10: 
-                        choice = [[Class.elite_gunner], 15, 'castle', 'nest'];
-                                            sockets.broadcast('Final Wave: All out Attack!');
+                        choice = [[Class.elite_gunner], 10, 'castle', 'nest'];
+                                                                                     sockets.broadcast('12 Attackers have Spawned!');
 
                         break;
                      case 11: 
                         choice = [[Class.closerarena], 10, 'a', 'norm'];
-                                            sockets.broadcast('BLUE DEFENDERS HAVE WON THE GAME!');
-
                         sockets.broadcast('Arena Closed: No players can join!');
+                        sockets.broadcast('BLUE DEFENDERS HAVE WON THE GAME!');
 
 
                         break;
                      case 12: 
-                        choice = [[Class.closerarena], 12, 'a', 'norm'];
+                        choice = [[Class.closerarena], 12, 'a', 'nest'];
                                             sockets.broadcast('Closing!');
 
        
@@ -5041,7 +5050,7 @@ let server = http.createServer((req, res) => {
   switch (pathname) {
     case '/':
       res.writeHead(200)
-      res.end(`<!DOCTYPE html><h3>Arras</h3><button onclick="location.href = 'https://arras.io/#host=' + location.host">Open</button>`)
+      res.end(`<!DOCTYPE html><h3>The Original Game is at ka2-arras.glitch.me</h3>`)
     break
     case '/mockups.json':
       res.setHeader('Access-Control-Allow-Origin', '*')

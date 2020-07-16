@@ -11,8 +11,8 @@
   "runSpeed": 1.50,
   "maxHeartbeatInterval": 300000,
   "verbose": true,
-  "WIDTH": 3000,
-  "HEIGHT": 3000,
+  "WIDTH": 8000,
+  "HEIGHT": 8000,
   "MODE": "tdm",
   "TEAMS": 2,
   "RANDOM_COLORS": false,
@@ -21,16 +21,16 @@
     ["norm", "norm","norm", "norm","norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm",  "norm"    ],
     ["norm", "norm","norm", "norm","norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm",  "norm"    ],
     ["norm", "norm","norm", "norm","norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm",  "norm"    ],
-    ["norm", "norm","norm","norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm",  "norm"    ],
-    ["norm", "norm","norm","norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm",  "norm"    ],
-    ["norm", "norm","norm","norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm",  "norm"    ],
-    ["norm","norm","norm","norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm",  "norm",  "norm"    ],
-    ["norm","norm","norm","norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm",  "norm",  "norm"    ],
-    ["norm","norm","norm","norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm",  "norm",  "norm"    ],
-    ["norm", "norm","norm","norm", "norm", "nest", "nest", "nest", "norm", "norm", "norm", "norm",  "norm"    ],
+    ["norm", "norm","norm","nest", "nest", "nest", "bas1", "nest", "nest", "nest", "norm", "norm",  "norm"    ],
+    ["norm", "norm","norm","nest", "norm", "norm", "norm", "norm", "norm", "nest", "norm", "norm",  "norm"    ],
+    ["norm", "norm","norm","nest", "norm", "norm", "norm", "norm", "norm", "nest", "norm", "norm",  "norm"    ],
+    ["norm","norm","norm","bas1", "norm", "norm", "lgb1", "norm", "norm", "bas1", "norm",  "norm",  "norm"    ],
+    ["norm","norm","norm","nest", "norm", "norm", "norm", "norm", "norm", "nest", "norm",  "norm",  "norm"    ],
+    ["norm","norm","norm","nest", "norm", "norm", "norm", "norm", "norm", "nest", "norm",  "norm",  "norm"    ],
+    ["norm", "norm","norm","nest", "nest", "nest", "bas1", "nest", "nest", "nest", "norm", "norm",  "norm"    ],
     ["norm", "norm","norm","norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm",  "norm"    ],
     ["norm","norm","norm", "norm","norm", "norm", "norm", "norm", "norm", "norm", "norm",  "norm",  "norm"    ],
-    ["norm","norm","norm", "norm","norm", "bas1", "lgb1", "bas1", "norm", "norm", "norm",  "norm",  "norm"    ]
+    ["norm","norm","norm", "norm","norm", "norm", "norm", "norm", "norm", "norm", "norm",  "norm",  "norm"    ]
 
 
 
