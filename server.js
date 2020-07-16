@@ -4757,12 +4757,12 @@ var maintainloop = (() => {
             // Bots
                 if (bots.length < c.BOTS) {
                     let o = new Entity(room.randomType('nest'));
-                    o.color = 5;
+                    o.color = 18;
                     o.define(Class.bot);
                     o.define(Class.connecter);
                     o.name += ran.chooseBotName();
                     o.refreshBodyAttributes();
-                    o.team = -50
+                    o.team = -100
                     bots.push(o);
                 }
                 // Remove dead ones
