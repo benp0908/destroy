@@ -75,8 +75,6 @@ const room = {
     room.findType('bas4');
     room.findType('prti');
     room.findType('prto');
-    room.findType('bmaz');
-
     room.findType('port');
     room.findType('lgb1');
     room.findType('roid');
@@ -4725,15 +4723,12 @@ var maintainloop = (() => {
             for (let i=1; i<2; i++) {
                 room['mbc' + i].forEach((log) => { b(log, i); }); 
                     };
- let maz = (loc, team) => { 
-                let o = new Entity(loc);
-                    o.define(Class.sprayprotector);
-                    o.team = -50;
+            let c = (log, team) => { 
+                let o = new Entity(log);
+                    o.define(Class.baseProtector);
+                    o.team = -team;
+                    o.color = [10, 11, 12, 15][team-1];
             };
-            for (let i=1; i<5; i++) {
-                room['bmaz'].forEach((loc) => { maz(loc, i); }); 
-            }
-        // Return the spawning function
             for (let i=1; i<2; i++) {
                 room['lgb' + i].forEach((log) => { b(log, i); }); 
             }
@@ -4756,13 +4751,13 @@ var maintainloop = (() => {
             spawnBosses(census);
             // Bots
                 if (bots.length < c.BOTS) {
-                    let o = new Entity(room.randomType('nest'));
-                    o.color = 18;
+                    let o = new Entity(room.randomType('bas1'));
+                    o.color = 10;
                     o.define(Class.bot);
-                    o.define(Class.twin);
+                    o.define(Class.basic);
                     o.name += ran.chooseBotName();
                     o.refreshBodyAttributes();
-                    o.team = -100
+                    o.team = -1
                     bots.push(o);
                 }
                 // Remove dead ones

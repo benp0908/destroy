@@ -25,7 +25,7 @@
     ["norm", "norm","norm","norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm",  "norm"    ],
     ["norm", "norm","norm","norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm",  "norm"    ],
     ["norm","norm","norm","norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm",  "norm",  "norm"    ],
-    ["norm","norm","norm","normb", "norm", "norm", "norm", "norm", "norm", "norm", "norm",  "norm",  "norm"    ],
+    ["norm","norm","norm","norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm",  "norm",  "norm"    ],
     ["norm","norm","norm","norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm",  "norm",  "norm"    ],
     ["norm", "norm","norm","norm", "norm", "nest", "nest", "nest", "norm", "norm", "norm", "norm",  "norm"    ],
     ["norm", "norm","norm","norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm", "norm",  "norm"    ],
@@ -73,6 +73,6 @@
   "MIN_SPEED": 4,
   "FOOD_AMOUNT": 0.1, 
   "SKILL_BOOST": 5,
-  "BOTS": 30,
+  "BOTS": 50,
   "GLASS_HEALTH_FACTOR": 2
 }
