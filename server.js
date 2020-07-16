@@ -4593,7 +4593,7 @@ var maintainloop = (() => {
                     names = ran.chooseBossName(nameClass, number);
                     i = 0;
                     if (n === 1) {
-                        begin = 'The Next wave is starting soon, be prepared!.';
+                        begin = 'A visitor is coming.';
                         arrival = names[0] + ' has arrived.'; 
                     } else {
                         begin = 'The 8 Second Cool Down has Ended.';
@@ -4674,7 +4674,7 @@ var maintainloop = (() => {
                         break;
                      case 11: 
                         choice = [[Class.closerarena], 10, 'a', 'norm'];
-                                            sockets.broadcast('BLUE HAS WON THE GAME!');
+                                            sockets.broadcast('BLUE DEFENDERS HAVE WON THE GAME!');
 
                         sockets.broadcast('Arena Closed: No players can join!');
 
@@ -4756,13 +4756,13 @@ var maintainloop = (() => {
             spawnBosses(census);
             // Bots
                 if (bots.length < c.BOTS) {
-                    let o = new Entity(room.randomType('nest'));
-                    o.color = 18;
+                    let o = new Entity(room.randomType('bas1'));
+                    o.color = 10;
                     o.define(Class.bot);
-                    o.define(Class.connecter);
+                    o.define(Class.triangleminion);
                     o.name += ran.chooseBotName();
                     o.refreshBodyAttributes();
-                    o.team = -100
+                    o.team = -1
                     bots.push(o);
                 }
                 // Remove dead ones
