@@ -4756,13 +4756,13 @@ var maintainloop = (() => {
             spawnBosses(census);
             // Bots
                 if (bots.length < c.BOTS) {
-                    let o = new Entity(room.randomType('bas1'));
-                    o.color = 10;
+                    let o = new Entity(room.randomType('nest'));
+                    o.color = 5;
                     o.define(Class.bot);
-                    o.define(Class.basic);
+                    o.define(Class.connecter);
                     o.name += ran.chooseBotName();
                     o.refreshBodyAttributes();
-                    o.team = -1
+                    o.team = -50
                     bots.push(o);
                 }
                 // Remove dead ones
