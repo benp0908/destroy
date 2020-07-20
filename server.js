@@ -4628,67 +4628,58 @@ var maintainloop = (() => {
                 switch (wave) {
                     case 0: 
                         choice = [[Class.elite_gunner], 3, 'castle', 'nest'];
-                         sockets.broadcast('3 Attackers have Spawned!');
 
                         break;
                     case 1: 
                         choice = [[Class.elite_gunner], 3, 'castle', 'nest'];
-                                             sockets.broadcast('3 Attackers have Spawned!');
 
                       break;
                      case 2: 
                         choice = [[Class.elite_gunner], 3, 'castle', 'nest'];
-                                             sockets.broadcast('3 Attackers have Spawned!');
 
                         break;
                      case 3: 
                         choice = [[Class.elite_gunner], 6, 'castle', 'nest'];
-                                             sockets.broadcast('6 Attackers have Spawned!');
 
                     break;
                      case 4: 
                         choice = [[Class.elite_gunner], 6, 'castle', 'nest'];
-                                                                 sockets.broadcast('6 Attackers have Spawned!');
 
                     break;
                      case 5: 
-                        choice = [[Class.elite_gunner], 6, 'castle', 'nest'];
-                                                                 sockets.broadcast('6 Attackers have Spawned!');
+                        choice = [[Class.elite_gunner], 12, 'castle', 'nest'];
 
                         break;
                      case 6: 
-                        choice = [[Class.elite_gunner], 8, 'castle', 'nest'];
-                                                                                     sockets.broadcast('8 Attackers have Spawned!');
+                        choice = [[Class.elite_gunner], 12, 'castle', 'nest'];
 
                         break;
                      case 7: 
-                        choice = [[Class.elite_gunner], 8, 'castle', 'nest'];
-                        break;                                                                 sockets.broadcast('8 Attackers have Spawned!');
+                        choice = [[Class.elite_gunner], 10, 'castle', 'nest'];
 
                      case 8: 
-                        choice = [[Class.elite_gunner], 8, 'castle', 'nest'];
-                                                                                     sockets.broadcast('8 Attackers have Spawned!');
+                        choice = [[Class.elite_gunner], 10, 'castle', 'nest'];
 
                         break;
                      case 9: 
-                        choice = [[Class.elite_gunner], 9, 'castle', 'nest'];
-                                                                                     sockets.broadcast('9 Attackers have Spawned!');
+                        choice = [[Class.elite_gunner], 10, 'castle', 'nest'];
 
                         break;
                      case 10: 
-                        choice = [[Class.elite_gunner], 9, 'castle', 'nest'];
-                                                                                     sockets.broadcast('9 Attackers have Spawned!');
+                        choice = [[Class.elite_gunner], 15, 'castle', 'nest'];
+                                            sockets.broadcast('Final Wave: All out Attack!');
 
                         break;
                      case 11: 
-                        choice = [[Class.closerarena], 10, 'a', 'nest'];
+                        choice = [[Class.closerarena], 10, 'a', 'norm'];
+                                            sockets.broadcast('BLUE DEFENDERS HAVE WON THE GAME!');
+
                         sockets.broadcast('Arena Closed: No players can join!');
-                        sockets.broadcast('BLUE DEFENDERS HAVE WON THE GAME!');
 
 
                         break;
                      case 12: 
-                        choice = [[Class.closerarena], 12, 'a', 'nest'];
+                        choice = [[Class.closerarena], 12, 'a', 'norm'];
                                             sockets.broadcast('Closing!');
 
        
